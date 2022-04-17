@@ -32,12 +32,14 @@ extern "C" {
 /* USER CODE END Includes */
 
 extern SPI_HandleTypeDef hspi1;
+extern SPI_HandleTypeDef hspi2;
 
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
 
 void MX_SPI1_Init(void);
+void MX_SPI2_Init(void);
 
 /* USER CODE BEGIN Prototypes */
 #define W25QXX_CS_NON HAL_GPIO_WritePin(W25Q_CS_GPIO_Port, W25Q_CS_Pin, GPIO_PIN_SET)

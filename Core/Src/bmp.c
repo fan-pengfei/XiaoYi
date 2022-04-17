@@ -19,26 +19,26 @@ void bmp_test(void)
 {
     int cnt;
     int i = 0;
-    f_res = f_open(&file, "1.bmp", FA_READ);
-    f_res = f_read(&file, &bmp_head, sizeof(struct _BMP_HEAD), &bw);
-    f_res = f_read(&file, &bmp_info, sizeof(struct _BMP_INFO), &bw);
-    f_lseek(&file, bmp_head.seek);
-    for (i = 0; i < 12; i++)
-    {
-        f_res = f_read(&file, &ReadBuffer, 240 * 20 * 3, &bw);
-        LCD_ShowPicture_bmp(0, 20 * i, 240, 20, ReadBuffer);
-    }
-    f_res = f_close(&file);
-    HAL_Delay(1000);
-    f_res = f_open(&file, "2.bmp", FA_READ);
-    f_res = f_read(&file, &bmp_head, sizeof(struct _BMP_HEAD), &bw);
-    f_res = f_read(&file, &bmp_info, sizeof(struct _BMP_INFO), &bw);
-    f_lseek(&file, bmp_head.seek);
-    for (i = 0; i < 12; i++)
-    {
-        f_res = f_read(&file, &ReadBuffer, 240 * 20 * 3, &bw);
-        LCD_ShowPicture_bmp(0, 20 * i, 240, 20, ReadBuffer);
-    }
-    f_res = f_close(&file);
-    HAL_Delay(1000);
+    //f_res = f_open(&file, "1.bmp", FA_READ);
+    // f_res = f_read(&file, &bmp_head, sizeof(struct _BMP_HEAD), &bw);
+    // f_res = f_read(&file, &bmp_info, sizeof(struct _BMP_INFO), &bw);
+    // f_lseek(&file, bmp_head.seek);
+    // for (i = 0; i < 12; i++)
+    // {
+    //     f_res = f_read(&file, &ReadBuffer, 240 * 20 * 3, &bw);
+    //     LCD_ShowPicture_bmp(0, 20 * i, 240, 20, ReadBuffer);
+    // }
+    // f_res = f_close(&file);
+    // HAL_Delay(1000);
+    // f_res = f_open(&file, "2.bmp", FA_READ);
+    // f_res = f_read(&file, &bmp_head, sizeof(struct _BMP_HEAD), &bw);
+    // f_res = f_read(&file, &bmp_info, sizeof(struct _BMP_INFO), &bw);
+    // f_lseek(&file, bmp_head.seek);
+    // for (i = 0; i < 12; i++)
+    // {
+    //     f_res = f_read(&file, &ReadBuffer, 240 * 20 * 3, &bw);
+    //     LCD_ShowPicture_bmp(0, 20 * i, 240, 20, ReadBuffer);
+    // }
+    // f_res = f_close(&file);
+    // HAL_Delay(1000);
 }

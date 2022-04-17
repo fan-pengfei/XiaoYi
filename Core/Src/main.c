@@ -126,14 +126,16 @@ int main(void)
     MX_DMA_Init();
     MX_SPI1_Init();
     MX_USART2_UART_Init();
+    MX_SPI2_Init();
     MX_FATFS_Init();
-    MX_USB_DEVICE_Init();
-    /* USER CODE BEGIN 2 */
+   MX_USB_DEVICE_Init();
 
+    /* USER CODE BEGIN 2 */
+    W25QXX_Init();
     delay_init(72);
     HAL_TIM_Base_Start_IT(&htim10);
     // W25QXX_Write(Data1, 0xffff, 2);
-    //	W25QXX_Read(Data2, 0xffff, 2);
+    // W25QXX_Read(Data2, 0xffff, 2);
 
     LCD_Init();
     FatfsTest();

@@ -147,22 +147,22 @@ FRESULT fileSystemInit()
 
 void FatfsTest(void)
 {
-    mount_disk(); //文件系统注册
-    // format_disk(); //格式化文件系统
-    //                 //	fileSystemInit();
-    // create_file(); //建立文件并写入"PZKKKKK666\n"
+    mount_disk();  //文件系统注册
+    //format_disk(); //格式化文件系统
+    //                  //	fileSystemInit();
+    //  create_file(); //建立文件并写入"PZKKKKK666\n"
+    //  while (1)
+    //  {
+    //      read_file(); //读取文件放到ReadBuffer中
+    //  }
+    f_res = f_open(&file, "1.bmp", FA_READ);
+    f_res = f_read(&file, ReadBuffer, 100, &bw);
+
+    f_res = f_close(&file);
     // while (1)
     // {
-    //     read_file(); //读取文件放到ReadBuffer中
+    //     bmp_test();
     // }
-    // f_res = f_open(&file, "1.bmp", FA_READ);
-    //  f_res = f_read(&file, ReadBuffer, 100, &bw);
-
-    // f_res = f_close(&file);
-    while (1)
-    {
-        bmp_test();
-    }
 }
 
 /* USER CODE END DECL */
@@ -245,12 +245,10 @@ DRESULT SpiDisk_read(
     /* USER CODE BEGIN READ */
     DRESULT res = RES_ERROR;
     UINT i;
-
     for (i = 0; i < count; i++)
     {
         W25QXX_Read(buff + i * 4096, sector * 4096 + i * 4096, 4096);
     }
-
     return RES_OK;
     /* USER CODE END READ */
 }
