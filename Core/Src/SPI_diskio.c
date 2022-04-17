@@ -55,8 +55,8 @@ static volatile DSTATUS Stat = STA_NOINIT;
 #define FLASH_PAGES_PER_SECTOR SECTOR_SIZE / PAGE_SIZE
 
 FATFS fs;
-FIL file;                      /* 文件对象 */
-FIL *pf = &file;               //将FIL结构体对象设置为全局变量！！！！！！！！！！！！
+FIL file,file1,file2;                      /* 文件对象 */
+FIL *pf = &file,*pf1=&file1,*pf2=&file2;               //将FIL结构体对象设置为全局变量！！！！！！！！！！！！
 FRESULT f_res;                 /* 文件操作结果 */
 UINT fnum;                     /* 文件成功读写数量 */
 BYTE ReadBuffer[240 * 20 * 3]; /* 读缓冲区 */
@@ -147,22 +147,22 @@ FRESULT fileSystemInit()
 
 void FatfsTest(void)
 {
-    mount_disk();  //文件系统注册
-    //format_disk(); //格式化文件系统
-    //                  //	fileSystemInit();
-    //  create_file(); //建立文件并写入"PZKKKKK666\n"
-    //  while (1)
-    //  {
-    //      read_file(); //读取文件放到ReadBuffer中
-    //  }
-    f_res = f_open(&file, "1.bmp", FA_READ);
-    f_res = f_read(&file, ReadBuffer, 100, &bw);
+    mount_disk(); //文件系统注册
+    // format_disk(); //格式化文件系统
+    //                   //	fileSystemInit();
+    //   create_file(); //建立文件并写入"PZKKKKK666\n"
+    //   while (1)
+    //   {
+    //       read_file(); //读取文件放到ReadBuffer中
+    //   }
+    //  f_res = f_open(&file, "1.bmp", FA_READ);
+    //  f_res = f_read(&file, ReadBuffer, 100, &bw);
 
-    f_res = f_close(&file);
-    // while (1)
-    // {
-    //     bmp_test();
-    // }
+    // f_res = f_close(&file);
+    while (1)
+    {
+        bmp_test();
+    }
 }
 
 /* USER CODE END DECL */

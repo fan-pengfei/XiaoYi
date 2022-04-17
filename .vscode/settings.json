@@ -4,6 +4,7 @@
         "delay.h": "c",
         "w25qxx.h": "c",
         "ff_gen_drv.h": "c",
-        "spi.h": "c"
+        "spi.h": "c",
+        "lcd.h": "c"
     }
 }

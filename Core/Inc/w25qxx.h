@@ -54,5 +54,6 @@ void W25QXX_Erase_Sector(uint32_t Dst_Addr);	//扇区擦除
 void W25QXX_Wait_Busy(void);           	//等待空闲
 void W25QXX_PowerDown(void);        	//进入掉电模式
 void W25QXX_WAKEUP(void);				//唤醒
+uint8_t SPI_ReadWriteByte(uint8_t TxData);
 #endif
 

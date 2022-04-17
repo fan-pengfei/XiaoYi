@@ -4,7 +4,7 @@
 #include "spi.h"
 uint16_t W25QXX_TYPE = 0;
 
-static uint8_t SPI_ReadWriteByte(uint8_t TxData)
+uint8_t SPI_ReadWriteByte(uint8_t TxData)
 {
     uint8_t data_read = 0x00, data_send = TxData;
     if (HAL_SPI_TransmitReceive(&hspi2, &data_send, &data_read, 1, 0xFFFF) != HAL_OK)
@@ -142,12 +142,17 @@ void W25QXX_Read(uint8_t *pBuffer, uint32_t ReadAddr, uint16_t NumByteToRead)
 void W25QXX_Write_Page(uint8_t *pBuffer, uint32_t WriteAddr, uint16_t NumByteToWrite)
 {
     uint16_t i;
+    W25QXX_Wait_Busy();                              //等待写入结束
     W25QXX_Write_Enable();                           // SET WEL
     PBout(12) = 0;                                   //使能器件
     SPI_ReadWriteByte(W25X_PageProgram);             //发送写页命令
     SPI_ReadWriteByte((uint8_t)((WriteAddr) >> 16)); //发送24bit地址
     SPI_ReadWriteByte((uint8_t)((WriteAddr) >> 8));
     SPI_ReadWriteByte((uint8_t)WriteAddr);
+    if (NumByteToWrite > 256)
+    {
+        NumByteToWrite = 256;
+    }
     for (i = 0; i < NumByteToWrite; i++)
         SPI_ReadWriteByte(pBuffer[i]); //循环写数
     PBout(12) = 1;                     //取消片选
