@@ -41,4 +41,5 @@ demo/bmp.o: ..\Core\Src\bmp.c ..\Core\Inc\bmp.h ..\Core\Inc\spi.h \
   ..\Middlewares\Third_Party\FatFs\src\ff.h \
   ..\Middlewares\Third_Party\FatFs\src\integer.h \
   ..\FATFS\Target\ffconf.h \
-  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h
+  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
+  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h

@@ -26,4 +26,5 @@ struct _BMP_INFO
     unsigned int r6;     //关键色彩
 };
 void bmp_test(void);
+void show_bmp(unsigned int x, unsigned int y, unsigned int num); //适用于24色位图
 #endif // !_BMP_H_

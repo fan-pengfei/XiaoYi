@@ -161,7 +161,13 @@ void FatfsTest(void)
     // f_res = f_close(&file);
     while (1)
     {
-        bmp_test();
+//        bmp_test();
+		show_bmp(0,0,1);
+		HAL_Delay(1000);
+		show_bmp(0,0,2);
+		HAL_Delay(1000);
+		show_bmp(0,0,3);
+		HAL_Delay(1000);
     }
 }
 
