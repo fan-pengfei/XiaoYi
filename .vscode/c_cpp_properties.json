@@ -1,0 +1,40 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${default}",
+                "${workspaceFolder}/Core/Inc",
+                "${workspaceFolder}/Drivers/STM32F4xx_HAL_Driver/Inc",
+                "${workspaceFolder}/USB_DEVICE/App",
+                "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32F4xx/Include",
+                "${workspaceFolder}/Drivers/CMSIS/Include",
+                "${workspaceFolder}/Middlewares/ST/STM32_USB_Device_Library/Core/Inc",
+                "${workspaceFolder}/USB_DEVICE/Target",
+                "${workspaceFolder}/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc",
+                "${workspaceFolder}/Drivers/LCD",
+                "${workspaceFolder}/Drivers/LVGL/lvgl",
+                "${workspaceFolder}/Drivers/LVGL/lvgl_driver",
+                "${workspaceFolder}/Drivers/LVGL/lvgl_app/src/lv_ex_widgets",
+                "${workspaceFolder}/Drivers/LVGL",
+                "${workspaceFolder}/Drivers/LVGL/lvgl_app/src/lv_demo_widgets",
+                "${workspaceFolder}/Drivers/LVGL/lvgl_app",
+                "${workspaceFolder}/Drivers/LVGL/lvgl/src",
+                "${workspaceFolder}/Middlewares/Third_Party/FatFs/src",
+                "${workspaceFolder}/FATFS/Target"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "USE_HAL_DRIVER",
+                "STM32F401xC"
+            ],
+            "compilerPath": "D:\\mingw64\\bin\\gcc.exe",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "windows-gcc-x64"
+        }
+    ],
+    "version": 4
+}
