@@ -40,6 +40,7 @@
 #include "spi.h"
 #include "w25qxx.h"
 #include "lcd.h"
+#include "bmp.h"
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
 
@@ -54,11 +55,11 @@ static volatile DSTATUS Stat = STA_NOINIT;
 #define FLASH_PAGES_PER_SECTOR SECTOR_SIZE / PAGE_SIZE
 
 FATFS fs;
-FIL file;                            /* 文件对象 */
-FIL *pf = &file;                     //将FIL结构体对象设置为全局变量！！！！！！！！！！！！
-FRESULT f_res;                       /* 文件操作结果 */
-UINT fnum;                           /* 文件成功读写数量 */
-BYTE ReadBuffer[240 * 40 * 2] = {0}; /* 读缓冲区 */
+FIL file;                      /* 文件对象 */
+FIL *pf = &file;               //将FIL结构体对象设置为全局变量！！！！！！！！！！！！
+FRESULT f_res;                 /* 文件操作结果 */
+UINT fnum;                     /* 文件成功读写数量 */
+BYTE ReadBuffer[240 * 20 * 3]; /* 读缓冲区 */
 BYTE WriteBuffer[] = "PZKKKKK666\n";
 BYTE work[4096];
 
@@ -150,9 +151,17 @@ void FatfsTest(void)
     // format_disk(); //格式化文件系统
     //                 //	fileSystemInit();
     // create_file(); //建立文件并写入"PZKKKKK666\n"
+    // while (1)
+    // {
+    //     read_file(); //读取文件放到ReadBuffer中
+    // }
+    // f_res = f_open(&file, "1.bmp", FA_READ);
+    //  f_res = f_read(&file, ReadBuffer, 100, &bw);
+
+    // f_res = f_close(&file);
     while (1)
     {
-        read_file(); //读取文件放到ReadBuffer中
+        bmp_test();
     }
 }
 

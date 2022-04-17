@@ -196,5 +196,5 @@ demo/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
   ..\Drivers\LVGL\lvgl_app\src\lv_demo_widgets\lv_demo_widgets.h \
   ..\Core\Inc\my_lib.h ..\Core\Inc\my_lib.h \
   ..\Drivers\LVGL\lvgl_driver\lv_port_indev.h \
-  ..\Drivers\LVGL\lvgl\lvgl.h ..\Drivers\LCD\lcdfont.h \
+  ..\Drivers\LVGL\lvgl\lvgl.h ..\Drivers\LCD\lcdfont.h ..\Core\Inc\bmp.h \
   ..\Core\Inc\delay.h ..\Core\Inc\sys.h

@@ -14,6 +14,7 @@
 "demo\usart.o"
 "demo\stm32f4xx_it.o"
 "demo\stm32f4xx_hal_msp.o"
+"demo\bmp.o"
 "demo\stm32f4xx_hal_pcd.o"
 "demo\stm32f4xx_hal_pcd_ex.o"
 "demo\stm32f4xx_ll_usb.o"

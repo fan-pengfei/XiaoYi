@@ -43,6 +43,7 @@
 #include "my_lib.h"
 #include "lv_port_indev.h"
 #include "lcdfont.h"
+#include "bmp.h"
 //#include "tt0.h"
 //#include "tt1.h"
 //#include "tt2.h"

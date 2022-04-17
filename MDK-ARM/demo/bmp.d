@@ -1,9 +1,4 @@
-demo/spi_diskio.o: ..\Core\Src\SPI_diskio.c \
-  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
-  ..\Middlewares\Third_Party\FatFs\src\ff_gen_drv.h \
-  ..\Middlewares\Third_Party\FatFs\src\diskio.h \
-  ..\Middlewares\Third_Party\FatFs\src\integer.h \
-  ..\Middlewares\Third_Party\FatFs\src\ff.h ..\FATFS\Target\ffconf.h \
+demo/bmp.o: ..\Core\Src\bmp.c ..\Core\Inc\bmp.h ..\Core\Inc\spi.h \
   ..\Core\Inc\main.h ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
   ..\Core\Inc\stm32f4xx_hal_conf.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h \
@@ -42,6 +37,8 @@ demo/spi_diskio.o: ..\Core\Src\SPI_diskio.c \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h \
-  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h ..\Core\Inc\spi.h \
-  ..\Core\Inc\main.h ..\Core\Inc\w25qxx.h ..\Drivers\LCD\lcd.h \
-  ..\Core\Inc\bmp.h
+  ..\Core\Inc\w25qxx.h ..\Drivers\LCD\lcd.h ..\Core\Inc\main.h \
+  ..\Middlewares\Third_Party\FatFs\src\ff.h \
+  ..\Middlewares\Third_Party\FatFs\src\integer.h \
+  ..\FATFS\Target\ffconf.h \
+  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h

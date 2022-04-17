@@ -22,12 +22,23 @@ Dialog DLL:      TCM.DLL V1.36.1.0
  
 <h2>Project:</h2>
 E:\¥Êµµ±∏∑›\stm32f401ccu6_w25qspiflash_u≈Ã_fatfsŒƒº˛œµÕ≥ _º”Õº∆¨œ‘ æ\watch_voice\MDK-ARM\demo.uvprojx
-Project File Date:  04/11/2022
+Project File Date:  04/17/2022
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.12', folder: 'D:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'demo'
-"demo\demo.axf" - 0 Error(s), 0 Warning(s).
+../Core/Src/SPI_diskio.c(43): warning: the current #pragma pack alignment value is modified in the included file [-Wpragma-pack]
+#include "bmp.h"
+         ^
+../Core/Inc\bmp.h(2): note: previous '#pragma pack' directive that modifies alignment is here
+#pragma pack(1) //Âº∫Âà∂1‰∏™Â≠óËäÇÂØπÈΩê
+        ^
+1 warning generated.
+compiling SPI_diskio.c...
+linking...
+Program Size: Code=30588 RO-data=512 RW-data=376 ZI-data=58624  
+FromELF: creating hex file...
+"demo\demo.axf" - 0 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -50,7 +61,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.5.0
-Build Time Elapsed:  00:00:04
+Build Time Elapsed:  00:00:03
 </pre>
 </body>
 </html>

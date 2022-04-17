@@ -667,6 +667,11 @@
               <FileType>1</FileType>
               <FilePath>../Core/Src/stm32f4xx_hal_msp.c</FilePath>
             </File>
+            <File>
+              <FileName>bmp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\bmp.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

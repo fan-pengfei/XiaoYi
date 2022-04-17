@@ -623,3 +623,25 @@ void LCD_ShowPicture(uint16_t x, uint16_t y, uint16_t length, uint16_t width, co
     }
     LCD_CS_Set();
 }
+void LCD_ShowPicture_bmp(uint16_t x, uint16_t y, uint16_t length, uint16_t width, const uint8_t pic[])
+{
+    uint16_t i, j, temp_rgb;
+    uint32_t k = 0;
+    uint8_t temp[2];
+    LCD_Address_Set(x, y, x + length - 1, y + width - 1);
+    LCD_CS_Clr();
+    for (i = 0; i < length; i++)
+    {
+        for (j = 0; j < width; j++)
+        {
+            // LCD_WR_DATA8(pic[k * 2]);
+            // LCD_WR_DATA8(pic[k * 2 + 1]);
+            temp_rgb = ((pic[k * 3 + 2] >> 3) ) << 11 | ((pic[k * 3 + 1] >> 2) ) << 5 | (pic[k * 3 + 2] >> 3);
+            temp[0] = temp_rgb >> 8;
+            temp[1] = temp_rgb;
+            HAL_SPI_Transmit(&hspi1, temp, 2, 0xffff);
+            k++;
+        }
+    }
+    LCD_CS_Set();
+}
