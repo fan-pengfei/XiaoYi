@@ -3,7 +3,7 @@
 <title>Static Call Graph - [demo\demo.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image demo\demo.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6120001: Last Updated: Sun Apr 17 21:47:42 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6120001: Last Updated: Sun Apr 17 23:04:01 2022
 <BR><P>
 <H3>Maximum Stack Usage =        328 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -616,7 +616,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FATFS_LinkDriver
 </UL>
 
-<P><STRONG><a name="[84]"></a>FatfsTest</STRONG> (Thumb, 60 bytes, Stack size 0 bytes, spi_diskio.o(.text.FatfsTest))
+<P><STRONG><a name="[84]"></a>FatfsTest</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, spi_diskio.o(.text.FatfsTest))
 <BR><BR>[Stack]<UL><LI>Max Depth = 328 + Unknown Stack Size
 <LI>Call Chain = FatfsTest &rArr; show_bmp &rArr; f_open &rArr; follow_path &rArr; dir_find &rArr; dir_next &rArr; create_chain &rArr; put_fat &rArr; move_window &rArr; sync_window &rArr; disk_write
 </UL>
@@ -1279,7 +1279,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[100]"></a>LCD_ShowPicture_bmp</STRONG> (Thumb, 300 bytes, Stack size 24 bytes, lcd.o(.text.LCD_ShowPicture_bmp))
+<P><STRONG><a name="[100]"></a>LCD_ShowPicture_bmp</STRONG> (Thumb, 154 bytes, Stack size 24 bytes, lcd.o(.text.LCD_ShowPicture_bmp))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = LCD_ShowPicture_bmp &rArr; LCD_Address_Set &rArr; HAL_SPI_Transmit &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Address_Set

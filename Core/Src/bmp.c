@@ -26,7 +26,7 @@ void show_bmp(unsigned int x, unsigned int y, unsigned int num) //适用于24色
     f_res = f_read(&file1, &bmp_head, sizeof(struct _BMP_HEAD), &bw);
     f_res = f_read(&file1, &bmp_info, sizeof(struct _BMP_INFO), &bw);
     f_lseek(&file1, bmp_head.seek);
-    if (bmp_info.h < 20)
+    if (bmp_info.h <= 20)
     {
         f_read(&file1, &ReadBuffer, bmp_info.w * bmp_info.h * 3, &bw);
         LCD_ShowPicture_bmp(x, y, bmp_info.w, bmp_info.h, ReadBuffer);

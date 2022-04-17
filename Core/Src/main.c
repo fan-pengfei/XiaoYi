@@ -136,7 +136,7 @@ int main(void)
     HAL_TIM_Base_Start_IT(&htim10);
     // W25QXX_Write(Data1, 0xffff, 2);
     // W25QXX_Read(Data2, 0xffff, 2);
-
+//W25QXX_Erase_Chip();
     LCD_Init();
     FatfsTest();
     // LCD_ShowPicture(1, 1, 128, 160, gImage_test);

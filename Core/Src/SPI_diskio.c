@@ -55,11 +55,11 @@ static volatile DSTATUS Stat = STA_NOINIT;
 #define FLASH_PAGES_PER_SECTOR SECTOR_SIZE / PAGE_SIZE
 
 FATFS fs;
-FIL file,file1,file2;                      /* 文件对象 */
-FIL *pf = &file,*pf1=&file1,*pf2=&file2;               //将FIL结构体对象设置为全局变量！！！！！！！！！！！！
-FRESULT f_res;                 /* 文件操作结果 */
-UINT fnum;                     /* 文件成功读写数量 */
-BYTE ReadBuffer[240 * 20 * 3]; /* 读缓冲区 */
+FIL file, file1, file2;                        /* 文件对象 */
+FIL *pf = &file, *pf1 = &file1, *pf2 = &file2; //将FIL结构体对象设置为全局变量！！！！！！！！！！！！
+FRESULT f_res;                                 /* 文件操作结果 */
+UINT fnum;                                     /* 文件成功读写数量 */
+BYTE ReadBuffer[240 * 20 * 3];                 /* 读缓冲区 */
 BYTE WriteBuffer[] = "PZKKKKK666\n";
 BYTE work[4096];
 
@@ -148,6 +148,7 @@ FRESULT fileSystemInit()
 void FatfsTest(void)
 {
     mount_disk(); //文件系统注册
+    uint8_t i = 0;
     // format_disk(); //格式化文件系统
     //                   //	fileSystemInit();
     //   create_file(); //建立文件并写入"PZKKKKK666\n"
@@ -159,15 +160,19 @@ void FatfsTest(void)
     //  f_res = f_read(&file, ReadBuffer, 100, &bw);
 
     // f_res = f_close(&file);
+    show_bmp(0, 0, 14);
     while (1)
     {
-//        bmp_test();
-		show_bmp(0,0,1);
-		HAL_Delay(1000);
-		show_bmp(0,0,2);
-		HAL_Delay(1000);
-		show_bmp(0,0,3);
-		HAL_Delay(1000);
+        for (i = 0; i < 13; i++)
+        {
+            //        bmp_test();
+            show_bmp(0, 0, i);
+            HAL_Delay(10);
+            //		show_bmp(0,0,2);
+            //		HAL_Delay(1000);
+            //		show_bmp(0,0,3);
+            //		HAL_Delay(1000);
+        }
     }
 }
 
