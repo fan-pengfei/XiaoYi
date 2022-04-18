@@ -1,50 +1,12 @@
-demo/usart.o: ..\Core\Src\usart.c ..\Core\Inc\usart.h ..\Core\Inc\main.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
-  ..\Core\Inc\stm32f4xx_hal_conf.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h \
-  ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h \
-  ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f401xc.h \
-  ..\Drivers\CMSIS\Include\core_cm4.h \
-  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
-  ..\Drivers\CMSIS\Include\cmsis_version.h \
-  ..\Drivers\CMSIS\Include\cmsis_compiler.h \
-  ..\Drivers\CMSIS\Include\cmsis_armclang.h \
-  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
-  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
-  ..\Drivers\CMSIS\Include\mpu_armv7.h \
-  ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h \
-  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stddef.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_exti.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma_ex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cortex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rtc.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rtc_ex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h \
-  ..\Core\Inc\my_lib.h ..\Drivers\LCD\lcd_init.h ..\Core\Inc\main.h \
-  ..\Drivers\LCD\lcd.h D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
-  ..\Drivers\LVGL\lvgl\lvgl.h ..\Drivers\LVGL\lvgl\src\lv_misc\lv_log.h \
+demo/second.o: ..\Core\Src\second.c ..\Drivers\LVGL\lvgl\lvgl.h \
+  ..\Drivers\LVGL\lvgl\src\lv_misc\lv_log.h \
   ..\Drivers\LVGL\lvgl\src\lv_misc\..\lv_conf_internal.h \
+  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
   ..\Drivers\LVGL\lvgl\src\lv_misc\..\lv_conf_kconfig.h \
   ..\Drivers\LVGL\lv_conf.h ..\Drivers\LVGL\lvgl\src\lv_misc\lv_task.h \
   D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h \
   ..\Drivers\LVGL\lvgl\src\lv_misc\lv_mem.h \
+  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stddef.h \
   ..\Drivers\LVGL\lvgl\src\lv_misc\lv_types.h \
   ..\Drivers\LVGL\lvgl\src\lv_misc\lv_ll.h \
   ..\Drivers\LVGL\lvgl\src\lv_misc\lv_math.h \
@@ -163,20 +125,4 @@ demo/usart.o: ..\Core\Src\usart.c ..\Core\Inc\usart.h ..\Core\Inc\main.h \
   ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_widgets\lv_textarea.h \
   ..\Drivers\LVGL\lvgl\src\lv_draw\lv_img_cache.h \
   ..\Drivers\LVGL\lvgl\src\lv_api_map.h \
-  ..\Drivers\LVGL\lvgl\src\lv_misc\..\..\lvgl.h \
-  ..\Drivers\LVGL\lvgl_driver\lv_port_disp.h \
-  ..\Drivers\LVGL\lv_ex_conf.h ..\Drivers\LVGL\lvgl_app\lv_examples.h \
-  ..\Drivers\LVGL\lvgl_app\..\lvgl\lvgl.h \
-  ..\Drivers\LVGL\lvgl_app\..\lv_ex_conf.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_ex_get_started\lv_ex_get_started.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_ex_style\lv_ex_style.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_ex_widgets\lv_ex_widgets.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_demo_widgets\lv_demo_widgets.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_demo_benchmark\lv_demo_benchmark.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_demo_stress\lv_demo_stress.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_demo_keypad_encoder\lv_demo_keypad_encoder.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_demo_printer\lv_demo_printer.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_demo_printer\..\..\lv_examples.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_demo_music\lv_demo_music.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_demo_music\..\..\lv_examples.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_demo_widgets\lv_demo_widgets.h
+  ..\Drivers\LVGL\lvgl\src\lv_misc\..\..\lvgl.h

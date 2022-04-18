@@ -194,8 +194,7 @@ demo/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
   ..\Drivers\LVGL\lvgl_app\src\lv_demo_music\lv_demo_music.h \
   ..\Drivers\LVGL\lvgl_app\src\lv_demo_music\..\..\lv_examples.h \
   ..\Drivers\LVGL\lvgl_app\src\lv_demo_widgets\lv_demo_widgets.h \
-  ..\Core\Inc\my_lib.h ..\Core\Inc\my_lib.h \
-  ..\Drivers\LVGL\lvgl_driver\lv_port_indev.h \
+  ..\Core\Inc\my_lib.h ..\Drivers\LVGL\lvgl_driver\lv_port_indev.h \
   ..\Drivers\LVGL\lvgl\lvgl.h ..\Core\Inc\bmp.h \
   ..\Drivers\LVGL\lvgl_driver\lv_port_fs.h ..\Core\Inc\delay.h \
   ..\Core\Inc\sys.h

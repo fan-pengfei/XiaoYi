@@ -164,8 +164,7 @@ demo/tim.o: ..\Core\Src\tim.c ..\Core\Inc\tim.h ..\Core\Inc\main.h \
   ..\Drivers\LVGL\lvgl\src\lv_draw\lv_img_cache.h \
   ..\Drivers\LVGL\lvgl\src\lv_api_map.h \
   ..\Drivers\LVGL\lvgl\src\lv_misc\..\..\lvgl.h ..\Core\Inc\my_lib.h \
-  ..\Core\Inc\my_lib.h ..\Drivers\LCD\lcd_init.h \
-  ..\Drivers\LVGL\lvgl_driver\lv_port_disp.h \
+  ..\Drivers\LCD\lcd_init.h ..\Drivers\LVGL\lvgl_driver\lv_port_disp.h \
   ..\Drivers\LVGL\lv_ex_conf.h ..\Drivers\LVGL\lvgl_app\lv_examples.h \
   ..\Drivers\LVGL\lvgl_app\..\lvgl\lvgl.h \
   ..\Drivers\LVGL\lvgl_app\..\lv_ex_conf.h \
