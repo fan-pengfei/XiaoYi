@@ -160,20 +160,20 @@ void FatfsTest(void)
     //  f_res = f_read(&file, ReadBuffer, 100, &bw);
 
     // f_res = f_close(&file);
-    show_bmp(0, 0, 14);
-    while (1)
-    {
-        for (i = 0; i < 13; i++)
-        {
-            //        bmp_test();
-            show_bmp(0, 0, i);
-//            HAL_Delay(1000);
-            //		show_bmp(0,0,2);
-            //		HAL_Delay(1000);
-            //		show_bmp(0,0,3);
-            //		HAL_Delay(1000);
-        }
-    }
+    show_bmp(0, 0, 0);
+    //     while (1)
+    //     {
+    //         for (i = 0; i < 13; i++)
+    //         {
+    //             //        bmp_test();
+    //             show_bmp(0, 0, i);
+    // //            HAL_Delay(1000);
+    //             //		show_bmp(0,0,2);
+    //             //		HAL_Delay(1000);
+    //             //		show_bmp(0,0,3);
+    //             //		HAL_Delay(1000);
+    //         }
+    //     }
 }
 
 /* USER CODE END DECL */

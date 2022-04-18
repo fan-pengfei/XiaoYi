@@ -7,15 +7,16 @@ demo/lv_img_decoder.o: ..\Drivers\LVGL\lvgl\src\lv_draw\lv_img_decoder.c \
   ..\Drivers\LVGL\lvgl\src\lv_draw\lv_img_buf.h \
   D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h \
   ..\Drivers\LVGL\lvgl\src\lv_draw\..\lv_misc\lv_color.h \
-  ..\Drivers\LVGL\lvgl\src\lv_draw\..\lv_misc\..\lv_conf_internal.h \
-  ..\Drivers\LVGL\lvgl\src\lv_draw\..\lv_misc\lv_math.h \
-  ..\Drivers\LVGL\lvgl\src\lv_draw\..\lv_misc\lv_types.h \
+  ..\Drivers\LVGL\lvgl\src\lv_misc\..\lv_conf_internal.h \
+  ..\Drivers\LVGL\lvgl\src\lv_misc\lv_math.h \
+  ..\Drivers\LVGL\lvgl\src\lv_misc\lv_types.h \
   ..\Drivers\LVGL\lvgl\src\lv_draw\..\lv_misc\lv_area.h \
   D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
-  ..\Drivers\LVGL\lvgl\src\lv_draw\..\lv_misc\lv_mem.h \
+  ..\Drivers\LVGL\lvgl\src\lv_misc\lv_mem.h \
   D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stddef.h \
-  ..\Drivers\LVGL\lvgl\src\lv_draw\..\lv_misc\lv_log.h \
+  ..\Drivers\LVGL\lvgl\src\lv_misc\lv_log.h \
   ..\Drivers\LVGL\lvgl\src\lv_draw\..\lv_misc\lv_fs.h \
+  ..\Drivers\LVGL\lvgl\src\lv_draw\..\lv_misc\lv_types.h \
   ..\Drivers\LVGL\lvgl\src\lv_draw\..\lv_core\lv_style.h \
   ..\Drivers\LVGL\lvgl\src\lv_draw\..\lv_core\..\lv_font\lv_font.h \
   ..\Drivers\LVGL\lvgl\src\lv_draw\..\lv_core\..\lv_font\..\lv_conf_internal.h \
@@ -32,6 +33,7 @@ demo/lv_img_decoder.o: ..\Drivers\LVGL\lvgl\src\lv_draw\lv_img_decoder.c \
   ..\Drivers\LVGL\lvgl\src\lv_draw\..\lv_draw\lv_draw_img.h \
   ..\Drivers\LVGL\lvgl\src\lv_draw\..\lv_misc\lv_ll.h \
   ..\Drivers\LVGL\lvgl\src\lv_draw\..\lv_misc\lv_gc.h \
-  ..\Drivers\LVGL\lvgl\src\lv_draw\..\lv_misc\lv_task.h \
-  ..\Drivers\LVGL\lvgl\src\lv_draw\..\lv_misc\..\lv_draw\lv_img_cache.h \
-  ..\Drivers\LVGL\lvgl\src\lv_draw\..\lv_misc\..\lv_draw\lv_draw_mask.h
+  ..\Drivers\LVGL\lvgl\src\lv_misc\lv_ll.h \
+  ..\Drivers\LVGL\lvgl\src\lv_misc\lv_task.h \
+  ..\Drivers\LVGL\lvgl\src\lv_misc\..\lv_draw\lv_img_cache.h \
+  ..\Drivers\LVGL\lvgl\src\lv_misc\..\lv_draw\lv_draw_mask.h

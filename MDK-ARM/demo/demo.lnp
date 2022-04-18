@@ -143,6 +143,7 @@
 "demo\lv_win.o"
 "demo\lv_port_disp.o"
 "demo\lv_port_indev.o"
+"demo\lv_port_fs.o"
 "demo\lv_demo_widgets.o"
 "demo\my_lib.o"
 "demo\myfont.o"

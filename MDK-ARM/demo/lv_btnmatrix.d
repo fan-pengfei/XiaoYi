@@ -13,13 +13,13 @@ demo/lv_btnmatrix.o: ..\Drivers\LVGL\lvgl\src\lv_widgets\lv_btnmatrix.c \
   ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_core\..\lv_font\..\lv_conf_internal.h \
   ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_core\..\lv_font\lv_symbol_def.h \
   ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_core\..\lv_font\..\lv_misc\lv_area.h \
-  ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_core\..\lv_font\..\lv_misc\..\lv_conf_internal.h \
+  ..\Drivers\LVGL\lvgl\src\lv_misc\..\lv_conf_internal.h \
   D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
-  ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_core\..\lv_font\..\lv_misc\lv_mem.h \
-  ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_core\..\lv_font\..\lv_misc\lv_log.h \
-  ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_core\..\lv_font\..\lv_misc\lv_types.h \
+  ..\Drivers\LVGL\lvgl\src\lv_misc\lv_mem.h \
+  ..\Drivers\LVGL\lvgl\src\lv_misc\lv_log.h \
+  ..\Drivers\LVGL\lvgl\src\lv_misc\lv_types.h \
   ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_core\..\lv_misc\lv_color.h \
-  ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_core\..\lv_font\..\lv_misc\lv_math.h \
+  ..\Drivers\LVGL\lvgl\src\lv_misc\lv_math.h \
   ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_core\..\lv_misc\lv_area.h \
   ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_core\..\lv_misc\lv_anim.h \
   ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_core\..\lv_misc\lv_types.h \
@@ -34,7 +34,7 @@ demo/lv_btnmatrix.o: ..\Drivers\LVGL\lvgl\src\lv_widgets\lv_btnmatrix.c \
   ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_core\..\lv_hal\..\lv_misc\lv_area.h \
   ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_core\..\lv_hal\..\lv_misc\lv_ll.h \
   ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_core\..\lv_hal\..\lv_misc\lv_task.h \
-  ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_core\..\lv_font\..\lv_misc\lv_ll.h \
+  ..\Drivers\LVGL\lvgl\src\lv_misc\lv_ll.h \
   ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_core\..\lv_hal\lv_hal_indev.h \
   ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_core\..\lv_hal\..\lv_conf_internal.h \
   ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_core\..\lv_hal\lv_hal_tick.h \
@@ -44,8 +44,9 @@ demo/lv_btnmatrix.o: ..\Drivers\LVGL\lvgl\src\lv_widgets\lv_btnmatrix.c \
   ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_core\..\lv_draw\..\lv_misc\lv_bidi.h \
   ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_core\..\lv_draw\..\lv_misc\lv_txt.h \
   D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdarg.h \
-  ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_core\..\lv_font\..\lv_misc\..\lv_font\lv_font.h \
-  ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_core\..\lv_font\..\lv_misc\lv_printf.h \
+  ..\Drivers\LVGL\lvgl\src\lv_misc\lv_area.h \
+  ..\Drivers\LVGL\lvgl\src\lv_misc\..\lv_font\lv_font.h \
+  ..\Drivers\LVGL\lvgl\src\lv_misc\lv_printf.h \
   ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_core\..\lv_draw\lv_draw_line.h \
   ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_core\..\lv_draw\lv_draw_img.h \
   ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_core\..\lv_draw\lv_img_decoder.h \
@@ -77,5 +78,5 @@ demo/lv_btnmatrix.o: ..\Drivers\LVGL\lvgl\src\lv_widgets\lv_btnmatrix.c \
   ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_themes\lv_theme_material.h \
   ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_themes\lv_theme_mono.h \
   ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_misc\lv_txt_ap.h \
-  ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_core\..\lv_font\..\lv_misc\lv_txt.h \
-  ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_core\..\lv_font\..\lv_misc\..\lv_draw\lv_draw.h
+  ..\Drivers\LVGL\lvgl\src\lv_misc\lv_txt.h \
+  ..\Drivers\LVGL\lvgl\src\lv_misc\..\lv_draw\lv_draw.h

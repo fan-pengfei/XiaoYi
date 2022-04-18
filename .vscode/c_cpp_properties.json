@@ -21,7 +21,8 @@
                 "${workspaceFolder}/Drivers/LVGL/lvgl_app",
                 "${workspaceFolder}/Drivers/LVGL/lvgl/src",
                 "${workspaceFolder}/Middlewares/Third_Party/FatFs/src",
-                "${workspaceFolder}/FATFS/Target"
+                "${workspaceFolder}/FATFS/Target",
+                "${workspaceFolder}/FATFS/App"
             ],
             "defines": [
                 "_DEBUG",

@@ -1,65 +1,13 @@
-demo/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
-  ..\Core\Inc\stm32f4xx_hal_conf.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h \
-  ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h \
-  ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f401xc.h \
-  ..\Drivers\CMSIS\Include\core_cm4.h \
-  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
-  ..\Drivers\CMSIS\Include\cmsis_version.h \
-  ..\Drivers\CMSIS\Include\cmsis_compiler.h \
-  ..\Drivers\CMSIS\Include\cmsis_armclang.h \
-  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
-  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
-  ..\Drivers\CMSIS\Include\mpu_armv7.h \
-  ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h \
-  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stddef.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_exti.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma_ex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cortex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rtc.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rtc_ex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h \
-  ..\Core\Inc\dma.h ..\Core\Inc\main.h ..\FATFS\App\fatfs.h \
-  ..\Middlewares\Third_Party\FatFs\src\ff.h \
-  ..\Middlewares\Third_Party\FatFs\src\integer.h \
-  ..\FATFS\Target\ffconf.h \
-  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
-  ..\Middlewares\Third_Party\FatFs\src\ff_gen_drv.h \
-  ..\Middlewares\Third_Party\FatFs\src\diskio.h \
-  ..\Middlewares\Third_Party\FatFs\src\ff.h \
-  ..\FATFS\Target\user_diskio.h ..\Core\Inc\SPI_diskio.h \
-  ..\Core\Inc\rtc.h ..\Core\Inc\spi.h ..\Core\Inc\tim.h \
-  ..\Core\Inc\usart.h ..\USB_DEVICE\App\usb_device.h \
-  ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_def.h \
-  ..\USB_DEVICE\Target\usbd_conf.h \
-  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
-  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h ..\Core\Inc\gpio.h \
-  ..\Core\Inc\w25qxx.h ..\Drivers\LCD\lcd_init.h ..\Drivers\LCD\lcd.h \
-  ..\Drivers\LCD\pic.h ..\Drivers\LVGL\lvgl\lvgl.h \
+demo/lv_port_fs.o: ..\Drivers\LVGL\lvgl_driver\lv_port_fs.c \
+  ..\Drivers\LVGL\lvgl_driver\lv_port_fs.h ..\Drivers\LVGL\lvgl\lvgl.h \
   ..\Drivers\LVGL\lvgl\src\lv_misc\lv_log.h \
   ..\Drivers\LVGL\lvgl\src\lv_misc\..\lv_conf_internal.h \
+  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
   ..\Drivers\LVGL\lvgl\src\lv_misc\..\lv_conf_kconfig.h \
   ..\Drivers\LVGL\lv_conf.h ..\Drivers\LVGL\lvgl\src\lv_misc\lv_task.h \
   D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h \
   ..\Drivers\LVGL\lvgl\src\lv_misc\lv_mem.h \
+  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stddef.h \
   ..\Drivers\LVGL\lvgl\src\lv_misc\lv_types.h \
   ..\Drivers\LVGL\lvgl\src\lv_misc\lv_ll.h \
   ..\Drivers\LVGL\lvgl\src\lv_misc\lv_math.h \
@@ -68,6 +16,7 @@ demo/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
   ..\Drivers\LVGL\lvgl\src\lv_hal\lv_hal_disp.h \
   ..\Drivers\LVGL\lvgl\src\lv_hal\..\lv_misc\lv_color.h \
   ..\Drivers\LVGL\lvgl\src\lv_hal\..\lv_misc\lv_area.h \
+  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
   ..\Drivers\LVGL\lvgl\src\lv_hal\..\lv_misc\lv_ll.h \
   ..\Drivers\LVGL\lvgl\src\lv_hal\..\lv_misc\lv_task.h \
   ..\Drivers\LVGL\lvgl\src\lv_hal\lv_hal_indev.h \
@@ -178,24 +127,44 @@ demo/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
   ..\Drivers\LVGL\lvgl\src\lv_draw\lv_img_cache.h \
   ..\Drivers\LVGL\lvgl\src\lv_api_map.h \
   ..\Drivers\LVGL\lvgl\src\lv_misc\..\..\lvgl.h \
-  ..\Drivers\LVGL\lvgl_driver\lv_port_disp.h \
-  ..\Drivers\LVGL\lv_ex_conf.h ..\Drivers\LVGL\lvgl_app\lv_examples.h \
-  ..\Drivers\LVGL\lvgl_app\..\lvgl\lvgl.h \
-  ..\Drivers\LVGL\lvgl_app\..\lv_ex_conf.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_ex_get_started\lv_ex_get_started.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_ex_style\lv_ex_style.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_ex_widgets\lv_ex_widgets.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_demo_widgets\lv_demo_widgets.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_demo_benchmark\lv_demo_benchmark.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_demo_stress\lv_demo_stress.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_demo_keypad_encoder\lv_demo_keypad_encoder.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_demo_printer\lv_demo_printer.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_demo_printer\..\..\lv_examples.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_demo_music\lv_demo_music.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_demo_music\..\..\lv_examples.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_demo_widgets\lv_demo_widgets.h \
-  ..\Core\Inc\my_lib.h ..\Core\Inc\my_lib.h \
-  ..\Drivers\LVGL\lvgl_driver\lv_port_indev.h \
-  ..\Drivers\LVGL\lvgl\lvgl.h ..\Core\Inc\bmp.h \
-  ..\Drivers\LVGL\lvgl_driver\lv_port_fs.h ..\Core\Inc\delay.h \
-  ..\Core\Inc\sys.h
+  ..\Middlewares\Third_Party\FatFs\src\ff.h \
+  ..\Middlewares\Third_Party\FatFs\src\integer.h \
+  ..\FATFS\Target\ffconf.h ..\Core\Inc\main.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
+  ..\Core\Inc\stm32f4xx_hal_conf.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h \
+  ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h \
+  ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f401xc.h \
+  ..\Drivers\CMSIS\Include\core_cm4.h \
+  ..\Drivers\CMSIS\Include\cmsis_version.h \
+  ..\Drivers\CMSIS\Include\cmsis_compiler.h \
+  ..\Drivers\CMSIS\Include\cmsis_armclang.h \
+  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
+  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
+  ..\Drivers\CMSIS\Include\mpu_armv7.h \
+  ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_exti.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma_ex.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cortex.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rtc.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rtc_ex.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h \
+  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
+  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h

@@ -5,6 +5,7 @@
         "w25qxx.h": "c",
         "ff_gen_drv.h": "c",
         "spi.h": "c",
-        "lcd.h": "c"
+        "lcd.h": "c",
+        "lv_port_fs.h": "c"
     }
 }
