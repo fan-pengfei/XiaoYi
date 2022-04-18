@@ -623,22 +623,29 @@ void LCD_ShowPicture(uint16_t x, uint16_t y, uint16_t length, uint16_t width, co
     }
     LCD_CS_Set();
 }
-uint8_t temp_buf[240 * 20 * 2]; /* ¶Á»º³åÇø */
-void LCD_ShowPicture_bmp(uint16_t x, uint16_t y, uint16_t length, uint16_t width, const uint8_t pic[])
+// uint8_t temp_buf[240 * 20 * 2]; /* ¶Á»º³åÇø */
+void LCD_ShowPicture_bmp(uint16_t x, uint16_t y, uint16_t length, uint16_t width, uint8_t pic[])
 {
     uint16_t i, j, temp_rgb;
     uint32_t k = 0;
     uint8_t temp[2];
     LCD_Address_Set(x, y, x + length - 1, y + width - 1);
     LCD_CS_Clr();
+    // for (i = 0; i < length * width; i++)
+    // {
+    //     temp_rgb = ((pic[k * 3 + 2] >> 3)) << 11 | ((pic[k * 3 + 1] >> 2)) << 5 | (pic[k * 3 + 2] >> 3);
+    //     temp_buf[2 * k] = temp_rgb >> 8;
+    //     temp_buf[2 * k + 1] = temp_rgb;
+    //     k++;
+    // }
     for (i = 0; i < length * width; i++)
     {
         temp_rgb = ((pic[k * 3 + 2] >> 3)) << 11 | ((pic[k * 3 + 1] >> 2)) << 5 | (pic[k * 3 + 2] >> 3);
-        temp_buf[2 * k] = temp_rgb >> 8;
-        temp_buf[2 * k + 1] = temp_rgb;
+        pic[2 * k] = temp_rgb >> 8;
+        pic[2 * k + 1] = temp_rgb;
         k++;
     }
-    HAL_SPI_Transmit(&hspi1, temp_buf, length * width * 2, 0xffff);
+    HAL_SPI_Transmit(&hspi1, pic, length * width * 2, 0xffff);
     // for (i = 0; i < length; i++)
     // {
     //     for (j = 0; j < width; j++)

@@ -22,11 +22,26 @@ Dialog DLL:      TCM.DLL V1.36.1.0
  
 <h2>Project:</h2>
 E:\�浵����\hard_spi\watch_voice\MDK-ARM\demo.uvprojx
-Project File Date:  04/17/2022
+Project File Date:  04/18/2022
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.12', folder: 'D:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'demo'
+compiling lcd.c...
+../Core/Src/bmp.c(1): warning: the current #pragma pack alignment value is modified in the included file [-Wpragma-pack]
+#include "bmp.h"
+         ^
+../Core/Inc\bmp.h(2): note: previous '#pragma pack' directive that modifies alignment is here
+#pragma pack(1) //强制1个字节对齐
+        ^
+../Core/Src/bmp.c(27): warning: passing 'uint8_t [10]' to parameter of type 'const TCHAR *' (aka 'const char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+    f_res = f_open(&file1, temp_text, FA_READ);
+                           ^~~~~~~~~
+../Middlewares/Third_Party/FatFs/src\ff.h(242): note: passing argument to parameter 'path' here
+FRESULT f_open (FIL* fp, const TCHAR* path, BYTE mode);                         /* Open or create a file */
+                                      ^
+2 warnings generated.
+compiling bmp.c...
 ../Core/Src/SPI_diskio.c(43): warning: the current #pragma pack alignment value is modified in the included file [-Wpragma-pack]
 #include "bmp.h"
          ^
@@ -35,10 +50,28 @@ Build target 'demo'
         ^
 1 warning generated.
 compiling SPI_diskio.c...
+compiling my_lib.c...
+../Drivers/LVGL/lvgl_driver/lv_port_disp.c(144): warning: incompatible pointer types passing 'lv_color_t *' (aka 'lv_color16_t *') to parameter of type 'uint16_t *' (aka 'unsigned short *') [-Wincompatible-pointer-types]
+    my_LCD_Fill(area->x1, area->y1, area->x2, area->y2, color_p);
+                                                        ^~~~~~~
+../Drivers/LCD\lcd.h(25): note: passing argument to parameter 'color_p' here
+void my_LCD_Fill(uint16_t xsta, uint16_t ysta, uint16_t xend, uint16_t yend, uint16_t *color_p);
+                                                                                       ^
+1 warning generated.
+compiling lv_port_disp.c...
+compiling tim.c...
+../Core/Src/main.c(45): warning: the current #pragma pack alignment value is modified in the included file [-Wpragma-pack]
+#include "bmp.h"
+         ^
+../Core/Inc\bmp.h(2): note: previous '#pragma pack' directive that modifies alignment is here
+#pragma pack(1) //强制1个字节对齐
+        ^
+1 warning generated.
+compiling main.c...
 linking...
-Program Size: Code=40984 RO-data=520 RW-data=376 ZI-data=51936  
+Program Size: Code=41160 RO-data=520 RW-data=376 ZI-data=42528  
 FromELF: creating hex file...
-"demo\demo.axf" - 0 Error(s), 1 Warning(s).
+"demo\demo.axf" - 0 Error(s), 5 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -61,7 +94,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.5.0
-Build Time Elapsed:  00:00:05
+Build Time Elapsed:  00:00:04
 </pre>
 </body>
 </html>

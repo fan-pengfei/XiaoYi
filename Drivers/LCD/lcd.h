@@ -23,7 +23,7 @@ void LCD_ShowFloatNum1(uint16_t x,uint16_t y,float num,uint8_t len,uint16_t fc,u
 
 void LCD_ShowPicture(uint16_t x,uint16_t y,uint16_t length,uint16_t width,const uint8_t pic[]);//ÏÔÊ¾Í¼Æ¬
 void my_LCD_Fill(uint16_t xsta, uint16_t ysta, uint16_t xend, uint16_t yend, uint16_t *color_p);
-void LCD_ShowPicture_bmp(uint16_t x, uint16_t y, uint16_t length, uint16_t width, const uint8_t pic[]);
+void LCD_ShowPicture_bmp(uint16_t x, uint16_t y, uint16_t length, uint16_t width, uint8_t pic[]);
 //»­±ÊÑÕÉ«
 #define WHITE         	 0xFFFF
 #define BLACK         	 0x0000	  

@@ -16,6 +16,8 @@ extern UINT bw;
 UINT bw1, bw2;
 struct _BMP_HEAD bmp_head;
 struct _BMP_INFO bmp_info;
+//尝试试用下双缓存
+//加dma
 void show_bmp(unsigned int x, unsigned int y, unsigned int num) //适用于24色位图
 {
     uint8_t temp_text[10];
