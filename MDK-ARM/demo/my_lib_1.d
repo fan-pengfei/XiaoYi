@@ -182,4 +182,5 @@ demo/my_lib_1.o: ..\Core\Src\my_lib.c ..\Core\Inc\my_lib.h \
   ..\Drivers\LVGL\lvgl_app\src\lv_demo_widgets\lv_demo_widgets.h \
   ..\Core\Inc\tim.h ..\Core\Inc\main.h \
   ..\Drivers\LVGL\lvgl_driver\lv_port_indev.h \
-  ..\Drivers\LVGL\lvgl\lvgl.h
+  ..\Drivers\LVGL\lvgl\lvgl.h ..\Core\Src\myFont.c \
+  ..\Drivers\LVGL\lvgl\src\lv_widgets\..\..\lvgl.h

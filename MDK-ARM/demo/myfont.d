@@ -1,4 +1,5 @@
-demo/myfont.o: ..\Core\Src\myFont.c ..\Drivers\LVGL\lvgl\lvgl.h \
+demo/myfont.o: ..\Core\Src\myFont.c \
+  ..\Drivers\LVGL\lvgl\src\lv_widgets\..\..\lvgl.h \
   ..\Drivers\LVGL\lvgl\src\lv_misc\lv_log.h \
   ..\Drivers\LVGL\lvgl\src\lv_misc\..\lv_conf_internal.h \
   D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \

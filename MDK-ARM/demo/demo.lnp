@@ -149,7 +149,6 @@
 "demo\lv_port_fs.o"
 "demo\lv_demo_widgets.o"
 "demo\my_lib_1.o"
-"demo\myfont.o"
 "demo\spi_diskio.o"
 "demo\user_diskio.o"
 "demo\fatfs.o"

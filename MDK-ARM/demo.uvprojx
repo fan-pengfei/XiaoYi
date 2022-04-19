@@ -1729,11 +1729,6 @@
               <FileType>1</FileType>
               <FilePath>..\Core\Src\my_lib.c</FilePath>
             </File>
-            <File>
-              <FileName>myFont.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Core\Src\myFont.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
