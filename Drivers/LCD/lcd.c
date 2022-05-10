@@ -2,6 +2,25 @@
 #include "lcd_init.h"
 #include "main.h"
 extern SPI_HandleTypeDef hspi1;
+
+uint8_t SPI1_ReadWriteByte(uint8_t TxData)
+{		
+	uint16_t retry=0;				 
+	while((SPI1->SR&1<<1)==0)//等待发送区空	
+	{
+		retry++;
+		if(retry>0XFFFE)return 0;
+	}			  
+	SPI1->DR=TxData;	 	  //发送一个byte 
+	retry=0;
+	while((SPI1->SR&1<<0)==0) //等待接收完一个byte  
+	{
+		retry++;
+		if(retry>0XFFFE)return 0;
+	}	  						    
+	return SPI1->DR;          //返回收到的数据				    
+}
+
 /******************************************************************************
       函数说明：在指定区域填充颜色
       入口数据：xsta,ysta   起始坐标
@@ -30,7 +49,8 @@ void LCD_Fill(uint16_t xsta, uint16_t ysta, uint16_t xend, uint16_t yend, uint16
     {
         for (j = xsta; j <= xend; j++)
         {
-            HAL_SPI_Transmit(&hspi1, temp, 2, 0xffff);
+            SPI1_ReadWriteByte(temp[0]);
+            SPI1_ReadWriteByte(temp[1]);
         }
     }
     LCD_CS_Set();

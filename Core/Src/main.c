@@ -166,9 +166,16 @@ int main(void)
     HAL_TIM_Base_Start_IT(&htim10);
     HAL_UART_Receive_IT(&huart2, aRxBuffer, 5); // Enable the USART2 Interrupt
     LCD_Init();
-    lvgl_init();
-    analog(lv_scr_act());
-    HAL_Delay(100);
+	LCD_Fill(0,0,100,100,RED);
+	while(1)
+	{
+			LCD_Fill(0,0,239,239,RED);
+			LCD_Fill(0,0,239,239,BLUE);
+		
+	}
+//    lvgl_init();
+//    analog(lv_scr_act());
+//    HAL_Delay(100);
     //
     //    my_lvgl_fs_test();
     //	my_lvgl_test();
