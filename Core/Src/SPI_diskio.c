@@ -166,7 +166,7 @@ void FatfsTest(void)
 {
     mount_disk(); //文件系统注册
     uint8_t i = 0;
-    read_from_flash();
+    //read_from_flash();//测试字库是否正常写入
     // format_disk(); //格式化文件系统
     //                   //	fileSystemInit();
     //   create_file(); //建立文件并写入"PZKKKKK666\n"
@@ -185,7 +185,7 @@ void FatfsTest(void)
     //         show_bmp(0, 0, i);
     //     }
     // }
-    //write_to_flash();
+    //write_to_flash();//字库写入
     //     while (1)
     //     {
     //         for (i = 0; i < 13; i++)
