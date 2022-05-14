@@ -50,7 +50,7 @@ static volatile DSTATUS Stat = STA_NOINIT;
 
 #define PAGE_SIZE 256
 #define SECTOR_SIZE 4096
-#define SECTOR_COUNT 256 * 6
+#define SECTOR_COUNT 256 * 5
 #define BLOCK_SIZE 65536
 #define FLASH_PAGES_PER_SECTOR SECTOR_SIZE / PAGE_SIZE
 
@@ -150,7 +150,7 @@ void write_to_flash(void)
     uint8_t i;
     f_res = f_open(&file1, "myFont.bin", FA_READ);
     count_f = 0;
-    for (i = 0; i < 199; i++)
+    for (i = 0; i < 220; i++)
     {
         f_read(&file1, ReadBuffer, 10 * 1024, &bw);
         my_W25QXX_Write(ReadBuffer, i * 10 * 1024, 10 * 1024);
@@ -166,16 +166,16 @@ void FatfsTest(void)
 {
     mount_disk(); //文件系统注册
     uint8_t i = 0;
-    //read_from_flash();//测试字库是否正常写入
-    // format_disk(); //格式化文件系统
-    //                   //	fileSystemInit();
-    //   create_file(); //建立文件并写入"PZKKKKK666\n"
-    //   while (1)
-    //   {
-    //       read_file(); //读取文件放到ReadBuffer中
-    //   }
-    //  f_res = f_open(&file, "1.bmp", FA_READ);
-    //  f_res = f_read(&file, ReadBuffer, 100, &bw);
+    // read_from_flash();//测试字库是否正常写入
+    //  format_disk(); //格式化文件系统
+    //                    //	fileSystemInit();
+    //    create_file(); //建立文件并写入"PZKKKKK666\n"
+    //    while (1)
+    //    {
+    //        read_file(); //读取文件放到ReadBuffer中
+    //    }
+    //   f_res = f_open(&file, "1.bmp", FA_READ);
+    //   f_res = f_read(&file, ReadBuffer, 100, &bw);
 
     // f_res = f_close(&file);
     // while (1)
@@ -185,7 +185,7 @@ void FatfsTest(void)
     //         show_bmp(0, 0, i);
     //     }
     // }
-    //write_to_flash();//字库写入
+    //write_to_flash(); //字库写入
     //     while (1)
     //     {
     //         for (i = 0; i < 13; i++)

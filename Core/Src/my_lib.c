@@ -61,8 +61,15 @@ uint8_t text_temp[100];
 //     lv_task_t *task = lv_task_create(update_time, 1000, LV_TASK_PRIO_LOW, &test_data);
 // }
 LV_FONT_DECLARE(myFont); // 字体声明
-void test_lv_font(void)
+lv_fs_res_t lv_res;
+lv_fs_file_t lv_file;
+uint32_t length_text = 0;
+void test_lv_font(void) // UTF-8编码
 {
+    lv_res = lv_fs_open(&lv_file, "F:/T1.txt", LV_FS_MODE_RD);
+    lv_fs_seek(&lv_file, 0);
+    lv_fs_read(&lv_file, text_temp, 100, &length_text);
+
     lv_obj_t *scr = lv_disp_get_scr_act(NULL); /* 获取当前屏幕 */
 
     lv_theme_t *th = lv_theme_material_init(LV_COLOR_BLACK, LV_COLOR_RED, 0,
@@ -72,9 +79,11 @@ void test_lv_font(void)
 
     lv_scr_load(scr);
 
-    lv_obj_t *label1 = lv_label_create(scr, NULL);                           /* 创建 label 控件 */
-    lv_obj_set_pos(label1, 100, 100);                                        /* 设置控件的坐标 */
-    lv_label_set_text(label1, "你好,里飞网:www.lfly.xyz\n参数\n配置\n维护"); /* 设置文字 */
-    lv_obj_align(label1, NULL, LV_ALIGN_CENTER, 0, 0);                       /* 设置控件的对齐方式-相对坐标 */
-                                                                             // 应用效果风格
+    lv_obj_t *label1 = lv_label_create(scr, NULL);         /* 创建 label 控件 */
+    lv_obj_set_pos(label1, 100, 100);                      /* 设置控件的坐标 */
+                                                           // sprintf((uint8_t *)text_temp, "\n%s\n\0", text_temp);
+                                                           // lv_label_set_text(label1, text_temp);
+    lv_label_set_text(label1, "\n如火如荼进行的同时。"); /* 设置文字 */
+    lv_obj_align(label1, NULL, LV_ALIGN_CENTER, 0, 0);     /* 设置控件的对齐方式-相对坐标 */
+                                                           // 应用效果风格
 }

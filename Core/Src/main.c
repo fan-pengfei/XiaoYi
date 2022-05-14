@@ -85,8 +85,8 @@ extern RTC_TimeTypeDef GetTime;
 extern uint8_t text[50];
 extern uint8_t aRxBuffer[5];
 
-lv_fs_res_t lv_res;
-lv_fs_file_t lv_file;
+extern lv_fs_res_t lv_res;
+extern lv_fs_file_t lv_file;
 uint32_t num_f;
 /****************************/
 void my_lvgl_fs_test(void)
@@ -115,7 +115,7 @@ static void lvgl_init(void)
     lv_init();
     lv_port_disp_init();  // 显示器初始化
     lv_port_indev_init(); // 输入设备初始化
-                          // lv_port_fs_init();    // 文件系统设备初始化
+    lv_port_fs_init();    // 文件系统设备初始化
 }
 uint32_t resCount = 0;
 /* USER CODE END 0 */
@@ -167,7 +167,7 @@ int main(void)
     // 		LCD_Fill(0,0,100,100,RED);
     // 		LCD_Fill(0,0,100,100,BLUE);
     // }
-    lvgl_init();
+    //lvgl_init();
     // my_lvgl_fs_test();
     // FatfsTest();
     // 	lv_res = lv_fs_open(&lv_file,"F:/hello.txt", LV_FS_MODE_WR);// 创建一个文件
@@ -176,12 +176,12 @@ int main(void)
     // analog(lv_scr_act());
     //  my_lvgl_fs_test();
     // analog();
-     test_lv_font();
+    // test_lv_font();
     //    HAL_Delay(100);
     //
     //    my_lvgl_fs_test();
     //	my_lvgl_test();
-    // FatfsTest();
+    FatfsTest();
     //    lv_init();
     //    lv_port_disp_init();
     //    lv_port_indev_init();

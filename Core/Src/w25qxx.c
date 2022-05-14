@@ -141,7 +141,7 @@ uint16_t W25QXX_ReadID(void)
 void W25QXX_Read(uint8_t *pBuffer, uint32_t ReadAddr, uint16_t NumByteToRead)
 {
     uint16_t i;
-    ReadAddr = ReadAddr + 2 * 1024 * 1024;
+    ReadAddr = ReadAddr + 3 * 1024 * 1024;
     PBout(12) = 0;                                  //使能器件
     SPI_ReadWriteByte(W25X_ReadData);               //发送读取命令
     SPI_ReadWriteByte((uint8_t)((ReadAddr) >> 16)); //发送24bit地址
@@ -239,7 +239,7 @@ void W25QXX_Write(uint8_t *pBuffer, uint32_t WriteAddr, uint16_t NumByteToWrite)
     uint16_t i;
     uint8_t *W25QXX_BUF;
     uint32_t StartTime = HAL_GetTick();
-    WriteAddr = WriteAddr + 2 * 1024 * 1024;
+    WriteAddr = WriteAddr + 3 * 1024 * 1024;
     W25QXX_BUF = W25QXX_BUFFER;
     secpos = WriteAddr / 4096; //扇区地址
     secoff = WriteAddr % 4096; //在扇区内的偏移
