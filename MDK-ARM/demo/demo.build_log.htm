@@ -22,16 +22,24 @@ Dialog DLL:      TCM.DLL V1.36.1.0
  
 <h2>Project:</h2>
 E:\¥Êµµ±∏∑›\hard_spi\watch_voice\MDK-ARM\demo.uvprojx
-Project File Date:  04/20/2022
+Project File Date:  05/14/2022
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.12', folder: 'D:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'demo'
-compiling lcd.c...
+compiling my_lib.c...
+../Core/Src/main.c(44): warning: the current #pragma pack alignment value is modified in the included file [-Wpragma-pack]
+#include "bmp.h"
+         ^
+../Core/Inc\bmp.h(2): note: previous '#pragma pack' directive that modifies alignment is here
+#pragma pack(1) //Âº∫Âà∂1‰∏™Â≠óËäÇÂØπÈΩê
+        ^
+1 warning generated.
+compiling main.c...
 linking...
-Program Size: Code=35922 RO-data=506 RW-data=388 ZI-data=22796  
+Program Size: Code=155086 RO-data=14494 RW-data=484 ZI-data=55188  
 FromELF: creating hex file...
-"demo\demo.axf" - 0 Error(s), 0 Warning(s).
+"demo\demo.axf" - 0 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 

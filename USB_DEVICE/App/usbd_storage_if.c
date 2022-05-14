@@ -70,7 +70,7 @@
 /* USER CODE BEGIN PRIVATE_DEFINES */
 //����U�̵Ĵ�С��֪��˺��йأ������ϸ��鷳˵һ��������
 #define STORAGE_LUN_NBR 1
-#define STORAGE_BLK_NBR 8*256
+#define STORAGE_BLK_NBR 6*256
 #define STORAGE_BLK_SIZ 4096
 
 /* USER CODE END PRIVATE_DEFINES */

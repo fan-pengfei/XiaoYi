@@ -63,9 +63,9 @@ demo/my_lib_1.o: ..\Core\Src\my_lib.c ..\Core\Inc\my_lib.h \
   ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_conf_internal.h \
   ..\Drivers\LVGL\lvgl\src\lv_core\lv_style.h \
   ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_font\lv_font.h \
-  ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_font\..\lv_conf_internal.h \
-  ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_font\lv_symbol_def.h \
-  ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_font\..\lv_misc\lv_area.h \
+  ..\Drivers\LVGL\lvgl\src\lv_font\..\lv_conf_internal.h \
+  ..\Drivers\LVGL\lvgl\src\lv_font\lv_symbol_def.h \
+  ..\Drivers\LVGL\lvgl\src\lv_font\..\lv_misc\lv_area.h \
   ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_misc\lv_color.h \
   ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_misc\lv_area.h \
   ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_misc\lv_anim.h \
@@ -182,5 +182,4 @@ demo/my_lib_1.o: ..\Core\Src\my_lib.c ..\Core\Inc\my_lib.h \
   ..\Drivers\LVGL\lvgl_app\src\lv_demo_widgets\lv_demo_widgets.h \
   ..\Core\Inc\tim.h ..\Core\Inc\main.h \
   ..\Drivers\LVGL\lvgl_driver\lv_port_indev.h \
-  ..\Drivers\LVGL\lvgl\lvgl.h ..\Core\Src\myFont.c \
-  ..\Drivers\LVGL\lvgl\src\lv_widgets\..\..\lvgl.h
+  ..\Drivers\LVGL\lvgl\lvgl.h

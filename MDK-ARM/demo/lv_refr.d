@@ -9,9 +9,9 @@ demo/lv_refr.o: ..\Drivers\LVGL\lvgl\src\lv_core\lv_refr.c \
   D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h \
   ..\Drivers\LVGL\lvgl\src\lv_core\lv_style.h \
   ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_font\lv_font.h \
-  ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_font\..\lv_conf_internal.h \
-  ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_font\lv_symbol_def.h \
-  ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_font\..\lv_misc\lv_area.h \
+  ..\Drivers\LVGL\lvgl\src\lv_font\..\lv_conf_internal.h \
+  ..\Drivers\LVGL\lvgl\src\lv_font\lv_symbol_def.h \
+  ..\Drivers\LVGL\lvgl\src\lv_font\..\lv_misc\lv_area.h \
   ..\Drivers\LVGL\lvgl\src\lv_misc\..\lv_conf_internal.h \
   D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
   ..\Drivers\LVGL\lvgl\src\lv_misc\lv_mem.h \
@@ -66,6 +66,7 @@ demo/lv_refr.o: ..\Drivers\LVGL\lvgl\src\lv_core\lv_refr.c \
   ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_draw\lv_draw_triangle.h \
   ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_draw\lv_draw_arc.h \
   ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_font\lv_font_fmt_txt.h \
+  ..\Drivers\LVGL\lvgl\src\lv_font\lv_font.h \
   ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_gpu\lv_gpu_stm32_dma2d.h \
   ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_gpu\..\lv_misc\lv_area.h \
   ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_gpu\..\lv_misc\lv_color.h \

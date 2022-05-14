@@ -50,7 +50,7 @@ static volatile DSTATUS Stat = STA_NOINIT;
 
 #define PAGE_SIZE 256
 #define SECTOR_SIZE 4096
-#define SECTOR_COUNT 256 * 8
+#define SECTOR_COUNT 256 * 6
 #define BLOCK_SIZE 65536
 #define FLASH_PAGES_PER_SECTOR SECTOR_SIZE / PAGE_SIZE
 
@@ -144,11 +144,29 @@ FRESULT fileSystemInit()
     else
         return FR_OK;
 }
-
+uint8_t count_f = 0;
+void write_to_flash(void)
+{
+    uint8_t i;
+    f_res = f_open(&file1, "myFont.bin", FA_READ);
+    count_f = 0;
+    for (i = 0; i < 199; i++)
+    {
+        f_read(&file1, ReadBuffer, 10 * 1024, &bw);
+        my_W25QXX_Write(ReadBuffer, i * 10 * 1024, 10 * 1024);
+        count_f++;
+    }
+    f_res = f_close(&file1);
+}
+void read_from_flash(void)
+{
+    my_W25QXX_Read(ReadBuffer, 0x00, 100);
+}
 void FatfsTest(void)
 {
     mount_disk(); //文件系统注册
     uint8_t i = 0;
+    read_from_flash();
     // format_disk(); //格式化文件系统
     //                   //	fileSystemInit();
     //   create_file(); //建立文件并写入"PZKKKKK666\n"
@@ -160,7 +178,14 @@ void FatfsTest(void)
     //  f_res = f_read(&file, ReadBuffer, 100, &bw);
 
     // f_res = f_close(&file);
-    show_bmp(0, 0, 0);
+    // while (1)
+    // {
+    //     for (i = 0; i < 13; i = i + 2)
+    //     {
+    //         show_bmp(0, 0, i);
+    //     }
+    // }
+    //write_to_flash();
     //     while (1)
     //     {
     //         for (i = 0; i < 13; i++)

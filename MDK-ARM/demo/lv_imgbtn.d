@@ -9,10 +9,10 @@ demo/lv_imgbtn.o: ..\Drivers\LVGL\lvgl\src\lv_widgets\lv_imgbtn.c \
   ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_themes\..\lv_conf_internal.h \
   ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_themes\..\lv_core\lv_style.h \
   ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_themes\..\lv_core\..\lv_font\lv_font.h \
-  ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_themes\..\lv_core\..\lv_font\..\lv_conf_internal.h \
+  ..\Drivers\LVGL\lvgl\src\lv_font\..\lv_conf_internal.h \
   D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stddef.h \
-  ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_themes\..\lv_core\..\lv_font\lv_symbol_def.h \
-  ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_themes\..\lv_core\..\lv_font\..\lv_misc\lv_area.h \
+  ..\Drivers\LVGL\lvgl\src\lv_font\lv_symbol_def.h \
+  ..\Drivers\LVGL\lvgl\src\lv_font\..\lv_misc\lv_area.h \
   D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
   ..\Drivers\LVGL\lvgl\src\lv_misc\lv_mem.h \
   ..\Drivers\LVGL\lvgl\src\lv_misc\lv_log.h \

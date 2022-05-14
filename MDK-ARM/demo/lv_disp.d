@@ -24,9 +24,9 @@ demo/lv_disp.o: ..\Drivers\LVGL\lvgl\src\lv_core\lv_disp.c \
   ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_conf_internal.h \
   ..\Drivers\LVGL\lvgl\src\lv_core\lv_style.h \
   ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_font\lv_font.h \
-  ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_font\..\lv_conf_internal.h \
-  ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_font\lv_symbol_def.h \
-  ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_font\..\lv_misc\lv_area.h \
+  ..\Drivers\LVGL\lvgl\src\lv_font\..\lv_conf_internal.h \
+  ..\Drivers\LVGL\lvgl\src\lv_font\lv_symbol_def.h \
+  ..\Drivers\LVGL\lvgl\src\lv_font\..\lv_misc\lv_area.h \
   ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_misc\lv_color.h \
   ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_misc\lv_area.h \
   ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_misc\lv_anim.h \

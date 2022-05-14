@@ -11,4 +11,5 @@
 #include "lv_demo_widgets.h"
 void LCD_SET_LIGHT(int light);
 void analog(lv_obj_t *win);
+void test_lv_font(void);
 #endif

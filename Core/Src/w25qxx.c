@@ -12,7 +12,25 @@ uint8_t SPI_ReadWriteByte(uint8_t TxData)
         data_read = 0xFF; //错误就返回0xFF
     }
     return data_read;
+
+    // uint16_t retry = 0;
+    // while ((SPI2->SR & 1 << 1) == 0) //等待发送区空
+    // {
+    //     retry++;
+    //     if (retry > 0XFFFE)
+    //         return 0;
+    // }
+    // SPI2->DR = TxData; //发送一个byte
+    // retry = 0;
+    // while ((SPI2->SR & 1 << 0) == 1) //等待接收完一个byte
+    // {
+    //     retry++;
+    //     if (retry > 0XFFFE)
+    //         return 0;
+    // }
+    // return SPI2->DR; //返回收到的数据
 }
+
 // static uint8_t SPI_ReadWriteByte(uint8_t TxData)
 // {
 //     int i = 0;
@@ -123,6 +141,21 @@ uint16_t W25QXX_ReadID(void)
 void W25QXX_Read(uint8_t *pBuffer, uint32_t ReadAddr, uint16_t NumByteToRead)
 {
     uint16_t i;
+    ReadAddr = ReadAddr + 2 * 1024 * 1024;
+    PBout(12) = 0;                                  //使能器件
+    SPI_ReadWriteByte(W25X_ReadData);               //发送读取命令
+    SPI_ReadWriteByte((uint8_t)((ReadAddr) >> 16)); //发送24bit地址
+    SPI_ReadWriteByte((uint8_t)((ReadAddr) >> 8));
+    SPI_ReadWriteByte((uint8_t)ReadAddr);
+    for (i = 0; i < NumByteToRead; i++)
+    {
+        pBuffer[i] = SPI_ReadWriteByte(0XFF); //循环读数
+    }
+    PBout(12) = 1;
+}
+void my_W25QXX_Read(uint8_t *pBuffer, uint32_t ReadAddr, uint16_t NumByteToRead)
+{
+    uint16_t i;
     PBout(12) = 0;                                  //使能器件
     SPI_ReadWriteByte(W25X_ReadData);               //发送读取命令
     SPI_ReadWriteByte((uint8_t)((ReadAddr) >> 16)); //发送24bit地址
@@ -206,6 +239,58 @@ void W25QXX_Write(uint8_t *pBuffer, uint32_t WriteAddr, uint16_t NumByteToWrite)
     uint16_t i;
     uint8_t *W25QXX_BUF;
     uint32_t StartTime = HAL_GetTick();
+    WriteAddr = WriteAddr + 2 * 1024 * 1024;
+    W25QXX_BUF = W25QXX_BUFFER;
+    secpos = WriteAddr / 4096; //扇区地址
+    secoff = WriteAddr % 4096; //在扇区内的偏移
+    secremain = 4096 - secoff; //扇区剩余空间大小
+    if (NumByteToWrite <= secremain)
+        secremain = NumByteToWrite; //不大于4096个字节
+    while (1)
+    {
+        W25QXX_Read(W25QXX_BUF, secpos * 4096, 4096); //读出整个扇区的内容
+        for (i = 0; i < secremain; i++)               //校验数据
+        {
+            if (W25QXX_BUF[secoff + i] != 0XFF)
+                break; //需要擦除
+        }
+        if (i < secremain) //需要擦除
+        {
+            W25QXX_Erase_Sector(secpos);    //擦除这个扇区
+            for (i = 0; i < secremain; i++) //复制
+            {
+                W25QXX_BUF[i + secoff] = pBuffer[i];
+            }
+            W25QXX_Write_NoCheck(W25QXX_BUF, secpos * 4096, 4096); //写入整个扇区
+        }
+        else
+            W25QXX_Write_NoCheck(pBuffer, WriteAddr, secremain); //写已经擦除了的,直接写入扇区剩余区间.
+        if (NumByteToWrite == secremain)
+            break; //写入结束了
+        else       //写入未结束
+        {
+            secpos++;   //扇区地址增1
+            secoff = 0; //偏移位置为0
+
+            pBuffer += secremain;        //指针偏移
+            WriteAddr += secremain;      //写地址偏移
+            NumByteToWrite -= secremain; //字节数递减
+            if (NumByteToWrite > 4096)
+                secremain = 4096; //下一个扇区还是写不完
+            else
+                secremain = NumByteToWrite; //下一个扇区可以写完了
+        }
+    };
+    tim_sum = HAL_GetTick() - StartTime;
+}
+void my_W25QXX_Write(uint8_t *pBuffer, uint32_t WriteAddr, uint16_t NumByteToWrite)
+{
+    uint32_t secpos;
+    uint16_t secoff;
+    uint16_t secremain;
+    uint16_t i;
+    uint8_t *W25QXX_BUF;
+    uint32_t StartTime = HAL_GetTick();
 
     W25QXX_BUF = W25QXX_BUFFER;
     secpos = WriteAddr / 4096; //扇区地址
@@ -250,6 +335,7 @@ void W25QXX_Write(uint8_t *pBuffer, uint32_t WriteAddr, uint16_t NumByteToWrite)
     };
     tim_sum = HAL_GetTick() - StartTime;
 }
+
 //擦除整个芯片
 //等待时间超长...
 void W25QXX_Erase_Chip(void)

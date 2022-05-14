@@ -9,9 +9,9 @@ demo/lv_group.o: ..\Drivers\LVGL\lvgl\src\lv_core\lv_group.c \
   D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h \
   ..\Drivers\LVGL\lvgl\src\lv_core\lv_style.h \
   ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_font\lv_font.h \
-  ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_font\..\lv_conf_internal.h \
-  ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_font\lv_symbol_def.h \
-  ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_font\..\lv_misc\lv_area.h \
+  ..\Drivers\LVGL\lvgl\src\lv_font\..\lv_conf_internal.h \
+  ..\Drivers\LVGL\lvgl\src\lv_font\lv_symbol_def.h \
+  ..\Drivers\LVGL\lvgl\src\lv_font\..\lv_misc\lv_area.h \
   ..\Drivers\LVGL\lvgl\src\lv_misc\..\lv_conf_internal.h \
   D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
   ..\Drivers\LVGL\lvgl\src\lv_misc\lv_mem.h \

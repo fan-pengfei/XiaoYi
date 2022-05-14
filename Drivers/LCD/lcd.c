@@ -3,7 +3,7 @@
 #include "main.h"
 extern SPI_HandleTypeDef hspi1;
 
-uint8_t SPI1_ReadWriteByte(uint8_t TxData)
+static uint8_t SPI1_ReadWriteByte(uint8_t TxData)
 {
     uint16_t retry = 0;
     while ((SPI1->SR & 1 << 1) == 0) //µÈ´ý·¢ËÍÇø¿Õ

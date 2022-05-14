@@ -24,7 +24,6 @@
 #include "rtc.h"
 #include "spi.h"
 #include "tim.h"
-#include "usart.h"
 #include "usb_device.h"
 #include "gpio.h"
 
@@ -85,21 +84,20 @@ extern RTC_DateTypeDef GetData;
 extern RTC_TimeTypeDef GetTime;
 extern uint8_t text[50];
 extern uint8_t aRxBuffer[5];
+
 lv_fs_res_t lv_res;
+lv_fs_file_t lv_file;
+uint32_t num_f;
 /****************************/
 void my_lvgl_fs_test(void)
 {
     lv_fs_file_t lv_file;
 
-    lv_res = lv_fs_open(&lv_file, "F:/0.bmp", LV_FS_MODE_RD);
-    // if (lv_res != LV_FS_RES_OK)
-    // {
-    //     printf("LVGL FS open error. (%d)\n", lv_res);
-    // }
-    // else
-    //     printf("LVGL FS open Ok\n");
+    lv_res = lv_fs_open(&lv_file, "F:/myFont.bin", LV_FS_MODE_RD);
+    lv_fs_read(&lv_file, text, 50, &num_f);
     lv_fs_close(&lv_file);
 }
+
 static void my_lvgl_test(void)
 {
     /* 创建img btn */
@@ -117,9 +115,9 @@ static void lvgl_init(void)
     lv_init();
     lv_port_disp_init();  // 显示器初始化
     lv_port_indev_init(); // 输入设备初始化
-    lv_port_fs_init();    // 文件系统设备初始化
+                          // lv_port_fs_init();    // 文件系统设备初始化
 }
-
+uint32_t resCount = 0;
 /* USER CODE END 0 */
 
 /**
@@ -153,29 +151,33 @@ int main(void)
     MX_TIM10_Init();
     MX_DMA_Init();
     MX_SPI1_Init();
-    MX_USART2_UART_Init();
     MX_FATFS_Init();
     MX_USB_DEVICE_Init();
     MX_SPI2_Init();
     /* USER CODE BEGIN 2 */
     //记得修改MX_FATFS_Init，为spidriver
-
     SPI_ReadWriteByte(0xff);
     W25QXX_Init();
     delay_init(72);
     HAL_TIM_Base_Start_IT(&htim10);
-    HAL_UART_Receive_IT(&huart2, aRxBuffer, 5); // Enable the USART2 Interrupt
     LCD_Init();
-	LCD_Fill(0,0,100,100,RED);
-	while(1)
-	{
-			LCD_Fill(0,0,239,239,RED);
-			LCD_Fill(0,0,239,239,BLUE);
-		
-	}
-//    lvgl_init();
-//    analog(lv_scr_act());
-//    HAL_Delay(100);
+    LCD_Fill(0, 0, 239, 239, WHITE);
+    // while(1)
+    // {
+    // 		LCD_Fill(0,0,100,100,RED);
+    // 		LCD_Fill(0,0,100,100,BLUE);
+    // }
+    lvgl_init();
+    // my_lvgl_fs_test();
+    // FatfsTest();
+    // 	lv_res = lv_fs_open(&lv_file,"F:/hello.txt", LV_FS_MODE_WR);// 创建一个文件
+    // 	lv_res = lv_fs_write(&lv_file,"hellobug esp32", sizeof("hellobug esp32"), &resCount);// 创建一个文件
+    // lv_fs_close(&lv_file);
+    // analog(lv_scr_act());
+    //  my_lvgl_fs_test();
+    // analog();
+     test_lv_font();
+    //    HAL_Delay(100);
     //
     //    my_lvgl_fs_test();
     //	my_lvgl_test();

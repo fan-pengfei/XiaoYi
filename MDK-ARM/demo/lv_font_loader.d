@@ -1,13 +1,12 @@
-demo/lv_demo_widgets.o: \
-  ..\Drivers\LVGL\lvgl_app\src\lv_demo_widgets\lv_demo_widgets.c \
-  ..\Drivers\LVGL\lvgl_app\src\lv_demo_widgets\..\..\lv_examples.h \
-  ..\Drivers\LVGL\lvgl_app\..\lvgl\lvgl.h \
+demo/lv_font_loader.o: ..\Drivers\LVGL\lvgl\src\lv_font\lv_font_loader.c \
+  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h \
+  ..\Drivers\LVGL\lvgl\src\lv_font\..\lvgl.h \
+  ..\Drivers\LVGL\lvgl\src\lv_font\..\..\lvgl.h \
   ..\Drivers\LVGL\lvgl\src\lv_misc\lv_log.h \
   ..\Drivers\LVGL\lvgl\src\lv_misc\..\lv_conf_internal.h \
-  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
-  ..\Drivers\LVGL\lvgl\src\lv_misc\..\lv_conf_kconfig.h \
+  ..\Drivers\LVGL\lvgl\src\lv_font\..\lv_conf_kconfig.h \
   ..\Drivers\LVGL\lv_conf.h ..\Drivers\LVGL\lvgl\src\lv_misc\lv_task.h \
-  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h \
   ..\Drivers\LVGL\lvgl\src\lv_misc\lv_mem.h \
   D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stddef.h \
   ..\Drivers\LVGL\lvgl\src\lv_misc\lv_types.h \
@@ -128,16 +127,4 @@ demo/lv_demo_widgets.o: \
   ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_widgets\lv_textarea.h \
   ..\Drivers\LVGL\lvgl\src\lv_draw\lv_img_cache.h \
   ..\Drivers\LVGL\lvgl\src\lv_api_map.h \
-  ..\Drivers\LVGL\lvgl\src\lv_misc\..\..\lvgl.h \
-  ..\Drivers\LVGL\lvgl_app\..\lv_ex_conf.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_ex_get_started\lv_ex_get_started.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_ex_style\lv_ex_style.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_ex_widgets\lv_ex_widgets.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_demo_widgets\lv_demo_widgets.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_demo_benchmark\lv_demo_benchmark.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_demo_stress\lv_demo_stress.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_demo_keypad_encoder\lv_demo_keypad_encoder.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_demo_printer\lv_demo_printer.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_demo_printer\..\..\lv_examples.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_demo_music\lv_demo_music.h \
-  ..\Drivers\LVGL\lvgl_app\src\lv_demo_music\..\..\lv_examples.h
+  ..\Drivers\LVGL\lvgl\src\lv_font\..\lv_misc\lv_fs.h

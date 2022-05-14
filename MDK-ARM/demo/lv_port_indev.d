@@ -25,9 +25,9 @@ demo/lv_port_indev.o: ..\Drivers\LVGL\lvgl_driver\lv_port_indev.c \
   ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_conf_internal.h \
   ..\Drivers\LVGL\lvgl\src\lv_core\lv_style.h \
   ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_font\lv_font.h \
-  ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_font\..\lv_conf_internal.h \
-  ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_font\lv_symbol_def.h \
-  ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_font\..\lv_misc\lv_area.h \
+  ..\Drivers\LVGL\lvgl\src\lv_font\..\lv_conf_internal.h \
+  ..\Drivers\LVGL\lvgl\src\lv_font\lv_symbol_def.h \
+  ..\Drivers\LVGL\lvgl\src\lv_font\..\lv_misc\lv_area.h \
   ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_misc\lv_color.h \
   ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_misc\lv_area.h \
   ..\Drivers\LVGL\lvgl\src\lv_core\..\lv_misc\lv_anim.h \
@@ -176,7 +176,6 @@ demo/lv_port_indev.o: ..\Drivers\LVGL\lvgl_driver\lv_port_indev.c \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h
