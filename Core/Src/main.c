@@ -198,7 +198,9 @@ int main(void)
 
         /* USER CODE BEGIN 3 */
         // update_time(NULL);
-        HAL_Delay(500);
+        HAL_Delay(1);
+        lv_tick_inc(1);
+        lv_task_handler();
     }
     /* USER CODE END 3 */
 }

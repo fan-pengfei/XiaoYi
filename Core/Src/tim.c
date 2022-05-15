@@ -114,7 +114,6 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     if (htim == (&htim10))
     {
         ms++;
-        lv_tick_inc(1);
         if (ms == 1000)
         {
             ms = 0;
@@ -130,7 +129,6 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
                 }
             }
         }
-        lv_task_handler();
         if (ms % 100 == 0)
         {
             // HAL_RTC_GetTime(&hrtc, &GetTime, RTC_FORMAT_BIN);

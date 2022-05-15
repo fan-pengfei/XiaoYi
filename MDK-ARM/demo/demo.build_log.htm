@@ -27,16 +27,17 @@ Project File Date:  05/14/2022
 <h2>Output:</h2>
 *** Using Compiler 'V6.12', folder: 'D:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'demo'
-../Core/Src/my_lib.c(134): warning: passing 'uint8_t [500]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
-    lv_label_set_text(label1, text_temp); /* 设置文字 */
-                              ^~~~~~~~~
-../Drivers/LVGL/lvgl/src/lv_widgets/../lv_widgets/lv_label.h(129): note: passing argument to parameter 'text' here
-void lv_label_set_text(lv_obj_t * label, const char * text);
-                                                      ^
+../Core/Src/main.c(44): warning: the current #pragma pack alignment value is modified in the included file [-Wpragma-pack]
+#include "bmp.h"
+         ^
+../Core/Inc\bmp.h(2): note: previous '#pragma pack' directive that modifies alignment is here
+#pragma pack(1) //强制1个字节对齐
+        ^
 1 warning generated.
-compiling my_lib.c...
+compiling main.c...
+compiling tim.c...
 linking...
-Program Size: Code=111376 RO-data=14472 RW-data=484 ZI-data=56220  
+Program Size: Code=111364 RO-data=14472 RW-data=484 ZI-data=58268  
 FromELF: creating hex file...
 "demo\demo.axf" - 0 Error(s), 1 Warning(s).
 

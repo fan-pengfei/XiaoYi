@@ -68,7 +68,7 @@ void test_lv_font(void) // UTF-8编码
 {
     lv_res = lv_fs_open(&lv_file, "F:/T1.txt", LV_FS_MODE_RD);
     lv_fs_read(&lv_file, text_temp, 100, &length_text);
-    lv_fs_close(&lv_file);
+
     // lv_style_t font_style_35;
     // lv_style_init(&font_style_35);
     // lv_style_set_text_font(&font_style_35, LV_STATE_DEFAULT, &myFont35);
@@ -129,12 +129,12 @@ void test_lv_font(void) // UTF-8编码
 
     // lv_scr_load(scr);
 
-    lv_obj_t *label1 = lv_label_create(scr, NULL);                                           /* 创建 label 控件 */
-    lv_obj_set_pos(label1, 0, 0);                                                        /* 设置控件的坐标 */
-    lv_label_set_text(label1, text_temp); /* 设置文字 */
-    lv_obj_align(label1, NULL, LV_ALIGN_CENTER, -50, 0); /* 设置控件的对齐方式-相对坐标 */ // 应用效果风格
+    lv_obj_t *label1 = lv_label_create(scr, NULL);                                         /* 创建 label 控件 */
+    lv_obj_set_pos(label1, 0, 0);                                                          /* 设置控件的坐标 */
+    lv_label_set_text(label1, text_temp);                                                  /* 设置文字 */
+    lv_obj_align(label1, NULL, LV_ALIGN_CENTER, -50, -20); /* 设置控件的对齐方式-相对坐标 */ // 应用效果风格
     lv_obj_add_style(label1, LV_LABEL_PART_MAIN, &font_style_24);
-
+    lv_fs_close(&lv_file);
     // lv_obj_t *label2 = lv_label_create(scr, NULL);                                       /* 创建 label 控件 */
     // lv_obj_set_pos(label2, 100, 100);                                                    /* 设置控件的坐标 */
     // lv_label_set_text(label2, "2022年5月14日\n   星期六\n");                                 /* 设置文字 */
