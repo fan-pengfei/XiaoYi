@@ -148,12 +148,12 @@ uint8_t count_f = 0;
 void write_to_flash(void)
 {
     uint8_t i;
-    f_res = f_open(&file1, "myFont24.bin", FA_READ);
+    f_res = f_open(&file1, "myFont50.bin", FA_READ);
     count_f = 0;
-    for (i = 0; i < 190; i++)
+    for (i = 0; i < 3; i++)
     {
         f_read(&file1, ReadBuffer, 10 * 1024, &bw);
-        my_W25QXX_Write(ReadBuffer, 1024 * 1024 + i * 10 * 1024, 10 * 1024);
+        my_W25QXX_Write(ReadBuffer, i * 10 * 1024, 10 * 1024);
         count_f++;
     }
     f_res = f_close(&file1);
@@ -185,7 +185,7 @@ void FatfsTest(void)
     //         show_bmp(0, 0, i);
     //     }
     // }
-    //write_to_flash(); //×Ö¿âÐ´Èë
+    write_to_flash(); //×Ö¿âÐ´Èë
     //     while (1)
     //     {
     //         for (i = 0; i < 13; i++)

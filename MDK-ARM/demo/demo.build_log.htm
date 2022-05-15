@@ -22,24 +22,68 @@ Dialog DLL:      TCM.DLL V1.36.1.0
  
 <h2>Project:</h2>
 E:\�浵����\hard_spi\watch_voice\MDK-ARM\demo.uvprojx
-Project File Date:  05/14/2022
+Project File Date:  05/15/2022
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.12', folder: 'D:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'demo'
-../Core/Src/main.c(44): warning: the current #pragma pack alignment value is modified in the included file [-Wpragma-pack]
-#include "bmp.h"
-         ^
-../Core/Inc\bmp.h(2): note: previous '#pragma pack' directive that modifies alignment is here
-#pragma pack(1) //强制1个字节对齐
-        ^
-1 warning generated.
-compiling main.c...
-compiling tim.c...
+../Core/Src/my_lib.c(30): warning: passing 'uint8_t *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+    sprintf((uint8_t *)text_temp, "%02d:%02d:%02d", my_rtc.hour, my_rtc.min, my_rtc.sec);
+            ^~~~~~~~~~~~~~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(417): note: passing argument to parameter here
+extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
+                                                  ^
+../Core/Src/my_lib.c(31): warning: passing 'uint8_t [500]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+    lv_label_set_text(label1, text_temp); /* 设置文字 */
+                              ^~~~~~~~~
+../Drivers/LVGL/lvgl/src/lv_widgets/../lv_widgets/lv_label.h(129): note: passing argument to parameter 'text' here
+void lv_label_set_text(lv_obj_t * label, const char * text);
+                                                      ^
+../Core/Src/my_lib.c(76): warning: passing 'uint8_t *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+    sprintf((uint8_t *)text_temp, "%02d:%02d:%02d", my_rtc.hour, my_rtc.min, my_rtc.sec);
+            ^~~~~~~~~~~~~~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(417): note: passing argument to parameter here
+extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
+                                                  ^
+../Core/Src/my_lib.c(77): warning: passing 'uint8_t [500]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+    lv_label_set_text(label1, text_temp); /* 设置文字 */
+                              ^~~~~~~~~
+../Drivers/LVGL/lvgl/src/lv_widgets/../lv_widgets/lv_label.h(129): note: passing argument to parameter 'text' here
+void lv_label_set_text(lv_obj_t * label, const char * text);
+                                                      ^
+../Core/Src/my_lib.c(131): warning: passing 'uint8_t *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+    sprintf((uint8_t *)text_temp, "%02d:%02d:%02d", my_rtc.hour, my_rtc.min, my_rtc.sec);
+            ^~~~~~~~~~~~~~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(417): note: passing argument to parameter here
+extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
+                                                  ^
+../Core/Src/my_lib.c(140): warning: passing 'uint8_t [500]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+    lv_label_set_text(label1, text_temp);
+                              ^~~~~~~~~
+../Drivers/LVGL/lvgl/src/lv_widgets/../lv_widgets/lv_label.h(129): note: passing argument to parameter 'text' here
+void lv_label_set_text(lv_obj_t * label, const char * text);
+                                                      ^
+../Core/Src/my_lib.c(148): warning: passing 'uint8_t *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+    sprintf((uint8_t *)text_temp, "  2022年5月15日\n星期日", my_rtc.hour, my_rtc.min, my_rtc.sec);
+            ^~~~~~~~~~~~~~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(417): note: passing argument to parameter here
+extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
+                                                  ^
+../Core/Src/my_lib.c(148): warning: data argument not used by format string [-Wformat-extra-args]
+    sprintf((uint8_t *)text_temp, "  2022年5月15日\n星期日", my_rtc.hour, my_rtc.min, my_rtc.sec);
+                                  ~~~~~~~~~~~~~~~~~~~~~~~~~  ^
+../Core/Src/my_lib.c(157): warning: passing 'uint8_t [500]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+    lv_label_set_text(label2, text_temp);
+                              ^~~~~~~~~
+../Drivers/LVGL/lvgl/src/lv_widgets/../lv_widgets/lv_label.h(129): note: passing argument to parameter 'text' here
+void lv_label_set_text(lv_obj_t * label, const char * text);
+                                                      ^
+9 warnings generated.
+compiling my_lib.c...
 linking...
-Program Size: Code=111364 RO-data=14472 RW-data=484 ZI-data=58268  
+Program Size: Code=112438 RO-data=14506 RW-data=504 ZI-data=51856  
 FromELF: creating hex file...
-"demo\demo.axf" - 0 Error(s), 1 Warning(s).
+"demo\demo.axf" - 0 Error(s), 9 Warning(s).
 
 <h2>Software Packages used:</h2>
 

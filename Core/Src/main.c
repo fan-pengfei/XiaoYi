@@ -175,10 +175,10 @@ int main(void)
     // 	lv_res = lv_fs_open(&lv_file,"F:/hello.txt", LV_FS_MODE_WR);// 创建一个文件
     // 	lv_res = lv_fs_write(&lv_file,"hellobug esp32", sizeof("hellobug esp32"), &resCount);// 创建一个文件
     // lv_fs_close(&lv_file);
-    // analog(lv_scr_act());
+    analog(lv_scr_act());
     //  my_lvgl_fs_test();
     // analog();
-    test_lv_font();
+    // test_lv_font();
     //    HAL_Delay(100);
     //
     // my_lvgl_fs_test();
@@ -198,8 +198,7 @@ int main(void)
 
         /* USER CODE BEGIN 3 */
         // update_time(NULL);
-        HAL_Delay(1);
-        lv_tick_inc(1);
+        HAL_Delay(5);
         lv_task_handler();
     }
     /* USER CODE END 3 */

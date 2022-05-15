@@ -149,6 +149,7 @@
 "demo\myfont35.o"
 "demo\myfont60.o"
 "demo\myfont24.o"
+"demo\myfont50.o"
 "demo\lv_port_disp.o"
 "demo\lv_port_indev.o"
 "demo\lv_port_fs.o"
