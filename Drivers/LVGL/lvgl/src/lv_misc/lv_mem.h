@@ -29,7 +29,7 @@ extern "C" {
  *********************/
 
 #ifndef LV_MEM_BUF_MAX_NUM
-#define LV_MEM_BUF_MAX_NUM    16
+#define LV_MEM_BUF_MAX_NUM    1024
 #endif
 
 /**********************

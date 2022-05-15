@@ -6,6 +6,7 @@
         "ff_gen_drv.h": "c",
         "spi.h": "c",
         "lcd.h": "c",
-        "lv_port_fs.h": "c"
+        "lv_port_fs.h": "c",
+        "type_traits": "c"
     }
 }

@@ -313,7 +313,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>5</Optim>
+            <Optim>7</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F401xC</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc; ../Drivers/STM32F4xx_HAL_Driver/Inc; ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy; ../Drivers/CMSIS/Device/ST/STM32F4xx/Include; ../Drivers/CMSIS/Include; ..\Drivers\LCD; ..\Drivers\LVGL; ..\Drivers\LVGL\lvgl_driver; ..\Drivers\LVGL\lvgl; ..\Drivers\LVGL\lvgl_app\src\lv_demo_widgets; ..\Drivers\LVGL\lvgl_app; ..\Drivers\LVGL\lvgl_app\src\lv_ex_widgets\lv_ex_calendar; ..\Drivers\LVGL\lvgl_app\src; ..\Drivers\LVGL\lvgl_app\src\lv_ex_widgets\lv_ex_calendar; ..\Drivers\LVGL\lvgl\src\lv_widgets; ..\Drivers\IMG; ..\Drivers\W25QXX; ../FATFS/Target; ../FATFS/App; ../USB_DEVICE/App; ../USB_DEVICE/Target; ../Middlewares/Third_Party/FatFs/src; ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc; ../Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc; ..\Drivers\LVGL\lvgl\src\lv_misc; ..\Drivers\LVGL\lvgl\src\lv_font</IncludePath>
+              <IncludePath>../Core/Inc;   ../Drivers/STM32F4xx_HAL_Driver/Inc;   ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;   ../Drivers/CMSIS/Device/ST/STM32F4xx/Include;   ../Drivers/CMSIS/Include;   ..\Drivers\LCD;   ..\Drivers\LVGL;   ..\Drivers\LVGL\lvgl_driver;   ..\Drivers\LVGL\lvgl;   ..\Drivers\LVGL\lvgl_app\src\lv_demo_widgets;   ..\Drivers\LVGL\lvgl_app;   ..\Drivers\LVGL\lvgl_app\src\lv_ex_widgets\lv_ex_calendar;   ..\Drivers\LVGL\lvgl_app\src;   ..\Drivers\LVGL\lvgl_app\src\lv_ex_widgets\lv_ex_calendar;   ..\Drivers\LVGL\lvgl\src\lv_widgets;   ..\Drivers\IMG;   ..\Drivers\W25QXX;   ../FATFS/Target;   ../FATFS/App;   ../USB_DEVICE/App;   ../USB_DEVICE/Target;   ../Middlewares/Third_Party/FatFs/src;   ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc;   ../Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc;   ..\Drivers\LVGL\lvgl\src\lv_misc;   ..\Drivers\LVGL\lvgl\src\lv_font</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1637,6 +1637,31 @@
               <FileName>lv_font_loader.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Drivers\LVGL\lvgl\src\lv_font\lv_font_loader.c</FilePath>
+            </File>
+            <File>
+              <FileName>myFont1.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\LVGL\lvgl\src\lv_font\myFont1.c</FilePath>
+            </File>
+            <File>
+              <FileName>myFont_45.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\LVGL\lvgl\src\lv_font\myFont_45.c</FilePath>
+            </File>
+            <File>
+              <FileName>myFont35.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\LVGL\lvgl\src\lv_font\myFont35.c</FilePath>
+            </File>
+            <File>
+              <FileName>myFont60.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\LVGL\lvgl\src\lv_font\myFont60.c</FilePath>
+            </File>
+            <File>
+              <FileName>myFont24.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\LVGL\lvgl\src\lv_font\myFont24.c</FilePath>
             </File>
           </Files>
         </Group>

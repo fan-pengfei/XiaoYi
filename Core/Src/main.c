@@ -109,15 +109,17 @@ static void my_lvgl_test(void)
     /* 居中对齐 */
     lv_obj_align(imgbtn, NULL, LV_ALIGN_CENTER, 0, 0);
 }
-
+lv_mem_monitor_t mem_monitor;
 static void lvgl_init(void)
 {
     lv_init();
     lv_port_disp_init();  // 显示器初始化
     lv_port_indev_init(); // 输入设备初始化
     lv_port_fs_init();    // 文件系统设备初始化
+    lv_mem_monitor(&mem_monitor);
 }
 uint32_t resCount = 0;
+
 /* USER CODE END 0 */
 
 /**
@@ -167,7 +169,7 @@ int main(void)
     // 		LCD_Fill(0,0,100,100,RED);
     // 		LCD_Fill(0,0,100,100,BLUE);
     // }
-    //lvgl_init();
+    lvgl_init();
     // my_lvgl_fs_test();
     // FatfsTest();
     // 	lv_res = lv_fs_open(&lv_file,"F:/hello.txt", LV_FS_MODE_WR);// 创建一个文件
@@ -176,12 +178,12 @@ int main(void)
     // analog(lv_scr_act());
     //  my_lvgl_fs_test();
     // analog();
-    // test_lv_font();
+    test_lv_font();
     //    HAL_Delay(100);
     //
-    //    my_lvgl_fs_test();
+    // my_lvgl_fs_test();
     //	my_lvgl_test();
-    FatfsTest();
+    // FatfsTest();
     //    lv_init();
     //    lv_port_disp_init();
     //    lv_port_indev_init();

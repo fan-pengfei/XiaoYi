@@ -125,11 +125,7 @@ demo/myfont.o: ..\Drivers\LVGL\lvgl\src\lv_font\myFont.c \
   ..\Drivers\LVGL\lvgl\src\lv_widgets\..\lv_widgets\lv_textarea.h \
   ..\Drivers\LVGL\lvgl\src\lv_draw\lv_img_cache.h \
   ..\Drivers\LVGL\lvgl\src\lv_api_map.h \
-  ..\Drivers\LVGL\lvgl\src\lv_misc\..\..\lvgl.h \
-  ..\Middlewares\Third_Party\FatFs\src\ff_gen_drv.h \
-  ..\Middlewares\Third_Party\FatFs\src\diskio.h \
-  ..\Middlewares\Third_Party\FatFs\src\integer.h \
-  ..\Middlewares\Third_Party\FatFs\src\ff.h ..\FATFS\Target\ffconf.h \
+  ..\Drivers\LVGL\lvgl\src\lv_misc\..\..\lvgl.h ..\Core\Inc\w25qxx.h \
   ..\Core\Inc\main.h ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
   ..\Core\Inc\stm32f4xx_hal_conf.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h \
@@ -164,6 +160,4 @@ demo/myfont.o: ..\Drivers\LVGL\lvgl\src\lv_font\myFont.c \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h \
-  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h ..\Core\Inc\w25qxx.h \
-  ..\Core\Inc\main.h
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h

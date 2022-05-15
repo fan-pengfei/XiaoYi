@@ -1,0 +1,317 @@
+make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make.exe: *** No rule to make target 'all'.  Stop.
+
+# GNU Make 4.1
+# Built for i686-w64-mingw32
+# Copyright (C) 1988-2014 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Sun May 15 09:54:57 2022
+
+# Variables
+
+# 'override' directive
+GNUMAKEFLAGS := 
+# automatic
+<D = $(patsubst %/,%,$(patsubst %\,%,$(dir $<)))
+# automatic
+?F = $(notdir $?)
+# default
+.SHELLFLAGS := -c
+# makefile
+MAKEFLAGS = pqrR
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
+# environment
+PLATFORMIO_IDE = 2.4.3
+# automatic
+@D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
+# environment
+HOMEDRIVE = C:
+# automatic
+@F = $(notdir $@)
+# automatic
+^D = $(patsubst %/,%,$(patsubst %\,%,$(dir $^)))
+# environment
+PROG27B48B2C057 = 1
+# default
+SHELL := sh.exe
+# environment
+WINDIR = C:\Windows
+# environment
+VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"42e84e0914b17800d483f69e299e1b00.zh-cn","_translationsConfigFile":"C:\\Users\\xiaofei\\AppData\\Roaming\\Code\\clp\\42e84e0914b17800d483f69e299e1b00.zh-cn\\tcf.json","_cacheRoot":"C:\\Users\\xiaofei\\AppData\\Roaming\\Code\\clp\\42e84e0914b17800d483f69e299e1b00.zh-cn","_resolvedLanguagePackCoreLocation":"C:\\Users\\xiaofei\\AppData\\Roaming\\Code\\clp\\42e84e0914b17800d483f69e299e1b00.zh-cn\\da15b6fd3ef856477bf6f4fb29ba1b7af717770d","_corruptedFile":"C:\\Users\\xiaofei\\AppData\\Roaming\\Code\\clp\\42e84e0914b17800d483f69e299e1b00.zh-cn\\corrupted.info","_languagePackSupport":true}
+# environment
+ONEDRIVE = C:\Users\xiaofei\OneDrive
+# environment
+QSYS_ROOTDIR = E:\intelFPGA\17.1\quartus\sopc_builder\bin
+# environment
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+# makefile
+MAKEFILE_LIST := 
+# environment
+TMP = C:\Users\xiaofei\AppData\Local\Temp
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+PROGRAMW6432 = C:\Program Files
+# environment
+PROGRAMDATA = C:\ProgramData
+# environment
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-0009a9cc-f7cb-4364-bcce-678b46c0aa73-sock
+# environment
+VSCODE_CWD = E:\�浵����\hard_spi
+# default
+MAKE_HOST := i686-w64-mingw32
+# environment
+NO_PROXY = 127.0.0.1
+# environment
+SW_SIM_HYDRA = C:\Program Files\Common Files\SolidWorks Shared\Simulation Worker Agent\
+# environment
+COMMONPROGRAMW6432 = C:\Program Files\Common Files
+# environment
+ZES_ENABLE_SYSMAN = 1
+# makefile
+CURDIR := e:/�浵����/hard_spi/watch_voice
+# environment
+CHOCOLATEYLASTPATHUPDATE = 132567315484581012
+# environment
+PROCESSOR_ARCHITECTURE = x86
+# environment
+VXIPNPPATH64 = C:\Program Files\IVI Foundation\VISA\
+# environment
+USERPROFILE = C:\Users\xiaofei
+# environment
+CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
+# environment
+ALLUSERSPROFILE = C:\ProgramData
+# environment
+SOPC_KIT_NIOS2 = E:\intelFPGA\17.1\nios2eds
+# environment
+VSCODE_LOG_STACK = false
+# environment
+NUMBER_OF_PROCESSORS = 8
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync
+# automatic
+%F = $(notdir $%)
+# environment
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_14912_WIMBKVYFFQUVOWLN
+# environment
+SW_SIM_MPIT = INTELMPI
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+COMPUTERNAME = DESKTOP-LLJGNNO
+# environment
+PROGRAMFILES = C:\Program Files (x86)
+# environment
+DRIVERDATA = C:\Windows\System32\Drivers\DriverData
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+USERNAME = xiaofei
+# environment
+PUBLIC = C:\Users\Public
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+VSCODE_CODE_CACHE_PATH = C:\Users\xiaofei\AppData\Roaming\Code\CachedData\da15b6fd3ef856477bf6f4fb29ba1b7af717770d
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
+# environment
+LOGONSERVER = \\DESKTOP-LLJGNNO
+# environment
+ONEDRIVECONSUMER = C:\Users\xiaofei\OneDrive
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# environment
+USERDOMAIN = DESKTOP-LLJGNNO
+# environment
+MAKELEVEL := 0
+# environment
+PLATFORMIO_PATH = C:\Users\xiaofei\.platformio\python3;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk1.8.0_152\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\NetSarang;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\Program Files\MATLAB\R2016b\runtime\win64;D:\Program Files\MATLAB\R2016b\bin;D:\Program Files\MATLAB\R2016b\polyspace\bin;D:\Program Files (x86)\NetSarang\Xshell 7\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\ProgramData\chocolatey\bin;D:\Program Files\nodejs\;C:\Program Files\Git\cmd;E:\cmder;D:\Users\xiaofei\AppData\Local\Programs\Python\Python39\;E:\arm_stm32\OpenOCD-20210301-0.10.0\bin;E:\arm_stm32\make;D:\Program Files (x86)\GNU Tools ARM Embedded\5.4 2016q3\bin;D:\mingw64\bin;C:\cmake-3.21.3-windows-x86_64\bin;E:\Xilinx\Vivado\2018.3\bin;D:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin\;C:\Program Files\IVI Foundation\VISA\Win64\Bin\;D:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;E:\Hex2bin-2.5\Hex2bin-2.5\bin\Debug;C:\Program Files\Pandoc\;C:\Users\xiaofei\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\xiaofei\AppData\Local\Programs\Python\Python39\;C:\Users\xiaofei\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\xiaofei\AppData\Local\Programs\Python\Python37\;D:\Users\xiaofei\AppData\Local\Programs\Python\Python38\;C:\Users\xiaofei\AppData\Local\Microsoft\WindowsApps;D:\Program Files\Bandizip\;C:\Users\xiaofei\AppData\Local\Programs\Microsoft VS Code\bin;D:\x86_64-8.1.0-release-posix-seh-rt_v6-rev0\mingw64\bin;C:\Users\xiaofei\AppData\Roaming\npm;D:\Users\xiaofei\AppData\Local\Programs\Python\Python38\Scripts;C:\Qt\Qt5.9.0\Tools\mingw530_32\bin;D:\Program Files\JetBrains\PyCharm 2021.3\bin;C:\Users\xiaofei\AppData\Local\Programs\EmEditor;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk1.8.0_152\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\NetSarang;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\Program Files\MATLAB\R2016b\runtime\win64;D:\Program Files\MATLAB\R2016b\bin;D:\Program Files\MATLAB\R2016b\polyspace\bin;D:\Program Files (x86)\NetSarang\Xshell 7\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\ProgramData\chocolatey\bin;D:\Program Files\nodejs\;C:\Program Files\Git\cmd;E:\cmder;D:\Users\xiaofei\AppData\Local\Programs\Python\Python39\;E:\arm_stm32\OpenOCD-20210301-0.10.0\bin;E:\arm_stm32\make;D:\Program Files (x86)\GNU Tools ARM Embedded\5.4 2016q3\bin;D:\mingw64\bin;C:\cmake-3.21.3-windows-x86_64\bin;E:\Xilinx\Vivado\2018.3\bin;D:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin\;C:\Program Files\IVI Foundation\VISA\Win64\Bin\;D:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;E:\Hex2bin-2.5\Hex2bin-2.5\bin\Debug;C:\Program Files\Pandoc\;C:\Users\xiaofei\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\xiaofei\AppData\Local\Programs\Python\Python39\;C:\Users\xiaofei\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\xiaofei\AppData\Local\Programs\Python\Python37\;D:\Users\xiaofei\AppData\Local\Programs\Python\Python38\;C:\Users\xiaofei\AppData\Local\Microsoft\WindowsApps;D:\Program Files\Bandizip\;C:\Users\xiaofei\AppData\Local\Programs\Microsoft VS Code\bin;D:\x86_64-8.1.0-release-posix-seh-rt_v6-rev0\mingw64\bin;C:\Users\xiaofei\AppData\Roaming\npm;D:\Users\xiaofei\AppData\Local\Programs\Python\Python38\Scripts;C:\Qt\Qt5.9.0\Tools\mingw530_32\bin;D:\Program Files\JetBrains\PyCharm 2021.3\bin;C:\Users\xiaofei\AppData\Local\Programs\EmEditor
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+PATH = C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk1.8.0_152\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\NetSarang;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\Program Files\MATLAB\R2016b\runtime\win64;D:\Program Files\MATLAB\R2016b\bin;D:\Program Files\MATLAB\R2016b\polyspace\bin;D:\Program Files (x86)\NetSarang\Xshell 7\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\ProgramData\chocolatey\bin;D:\Program Files\nodejs\;C:\Program Files\Git\cmd;E:\cmder;D:\Users\xiaofei\AppData\Local\Programs\Python\Python39\;E:\arm_stm32\OpenOCD-20210301-0.10.0\bin;E:\arm_stm32\make;D:\Program Files (x86)\GNU Tools ARM Embedded\5.4 2016q3\bin;D:\mingw64\bin;C:\cmake-3.21.3-windows-x86_64\bin;E:\Xilinx\Vivado\2018.3\bin;D:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin\;C:\Program Files\IVI Foundation\VISA\Win64\Bin\;D:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;E:\Hex2bin-2.5\Hex2bin-2.5\bin\Debug;C:\Program Files\Pandoc\;C:\Users\xiaofei\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\xiaofei\AppData\Local\Programs\Python\Python39\;C:\Users\xiaofei\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\xiaofei\AppData\Local\Programs\Python\Python37\;D:\Users\xiaofei\AppData\Local\Programs\Python\Python38\;C:\Users\xiaofei\AppData\Local\Microsoft\WindowsApps;D:\Program Files\Bandizip\;C:\Users\xiaofei\AppData\Local\Programs\Microsoft VS Code\bin;D:\x86_64-8.1.0-release-posix-seh-rt_v6-rev0\mingw64\bin;C:\Users\xiaofei\AppData\Roaming\npm;D:\Users\xiaofei\AppData\Local\Programs\Python\Python38\Scripts;C:\Qt\Qt5.9.0\Tools\mingw530_32\bin;D:\Program Files\JetBrains\PyCharm 2021.3\bin;C:\Users\xiaofei\AppData\Local\Programs\EmEditor
+# environment
+JAVA_HOME = C:\Program Files\Java\jdk1.8.0_152
+# default
+MAKE_VERSION := 4.1
+# makefile
+.DEFAULT_GOAL := 
+# environment
+CLASSPATH = ;C:\Program Files\Java\jdk1.8.0_152\bin;C:\Program Files\Java\jdk1.8.0_152\jre1.8\bin;
+# environment
+PROGRAMFILES(X86) = C:\Program Files (x86)
+# automatic
+%D = $(patsubst %/,%,$(patsubst %\,%,$(dir $%)))
+# environment
+LOCALAPPDATA = C:\Users\xiaofei\AppData\Local
+# environment
+PSMODULEPATH = %ProgramFiles%\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
+# default
+MAKE_COMMAND := make.exe
+# environment
+PROCESSOR_ARCHITEW6432 = AMD64
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# environment
+PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 142 Stepping 11, GenuineIntel
+# environment
+OS = Windows_NT
+# environment
+VSCODE_IPC_HOOK = \\.\pipe\79fbba72119fa7625d333b4b9b112d17-1.67.1-main-sock
+# environment
+HOMEPATH = \Users\xiaofei
+# environment
+COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
+# environment
+PROMPT = $P$G
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
+# environment
+SYSTEMROOT = C:\Windows
+# automatic
++D = $(patsubst %/,%,$(patsubst %\,%,$(dir $+)))
+# automatic
++F = $(notdir $+)
+# environment
+APPDATA = C:\Users\xiaofei\AppData\Roaming
+# environment
+VXIPNPPATH = D:\Program Files (x86)\IVI Foundation\VISA\
+# environment
+TEMP = C:\Users\xiaofei\AppData\Local\Temp
+# environment
+COMSPEC = C:\Windows\system32\cmd.exe
+# default
+MAKEFILES := 
+# environment
+QUARTUS_ROOTDIR = E:\intelFPGA\17.1\quartus
+# automatic
+<F = $(notdir $<)
+# environment
+PLATFORMIO_CALLER = vscode
+# environment
+CMDER_HOME = E:\cmder
+# environment
+LC_ALL = C
+# environment
+JAVA_TOOL_OPTIONS = -Dfile.encoding=UTF-8
+# environment
+SW_SIM_TEMP = C:\ProgramData\SOLIDWORKS\SW_net_sim_temp\
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# environment
+SYSTEMDRIVE = C:
+# environment
+PROCESSOR_REVISION = 8e0b
+# environment
+PYCHARM = D:\Program Files\JetBrains\PyCharm 2021.3\bin;
+# environment
+MOZ_PLUGIN_PATH = D:\PDF\Foxit Phantom\plugins\
+# default
+.RECIPEPREFIX := 
+# environment
+LANG = C
+# environment
+PROCESSOR_LEVEL = 6
+# environment
+VSCODE_PID = 14912
+# environment
+NO_XILINX_DATA_LICENSE = HIDDEN
+# environment
+USERDOMAIN_ROAMINGPROFILE = DESKTOP-LLJGNNO
+# variable set hash-table stats:
+# Load=113/1024=11%, Rehash=0, Collisions=21/131=16%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (key e:/�浵����/hard_spi/watch_voice, mtime 1652530270): 14 files, no impossibilities.
+
+# 14 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+# Not a target:
+all:
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+makefile:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+makefile.mak:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+GNUmakefile:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# files hash-table stats:
+# Load=7/1024=1%, Rehash=0, Collisions=0/16=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 21 / storage = 176 B / avg = 8 B
+# current buf: size = 8174 B / used = 176 B / count = 21 / avg = 8 B
+
+# strcache performance: lookups = 23 / hit rate = 8%
+# hash-table stats:
+# Load=21/8192=0%, Rehash=0, Collisions=1/23=4%
+# Finished Make data base on Sun May 15 09:54:57 2022
+
+ 

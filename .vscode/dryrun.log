@@ -1,0 +1,6 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+make.exe: Entering directory 'e:/�浵����/hard_spi/watch_voice'
+make.exe: Leaving directory 'e:/�浵����/hard_spi/watch_voice'
+ 
+make.exe: *** No targets specified and no makefile found.  Stop.
+

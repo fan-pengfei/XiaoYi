@@ -9,9 +9,7 @@
  */
 
 #include "lvgl.h"
-#include "ff_gen_drv.h"
 #include "w25qxx.h"
-//
 
 typedef struct
 {
@@ -35,18 +33,19 @@ typedef struct
 } glyph_dsc_t;
 
 static x_header_t __g_xbf_hd = {
-    .min = 0x0020,
-    .max = 0x9fa5,
+    .min = 0x000a,
+    .max = 0x9fa0,
     .bpp = 4,
 };
 
-static uint8_t __g_font_buf[324]; //如bin文件存在SPI FLASH可使用此buff
+__attribute__((aligned(4)))static uint8_t __g_font_buf[324]; //如bin文件存在SPI FLASH可使用此buff
 
 static uint8_t *__user_font_getdata(int offset, int size)
 {
-    my_W25QXX_Read(__g_font_buf, offset, size);
     //如字模保存在SPI FLASH, SPIFLASH_Read(__g_font_buf,offset,size);
     //如字模已加载到SDRAM,直接返回偏移地址即可如:return (uint8_t*)(sdram_fontddr+offset);
+    my_W25QXX_Read(__g_font_buf, offset, size);
+    
     return __g_font_buf;
 }
 
