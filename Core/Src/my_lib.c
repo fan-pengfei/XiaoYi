@@ -21,12 +21,14 @@ void img1_show(void);
 void img2_show(void);
 void img3_show(void);
 void btnm_p_test(void);
+void btnm_t_test(void);
+void text_show(uint8_t num);
 uint8_t Minute = 59;
 uint8_t Hour = 8;
 uint8_t Second = 2;
 extern Times my_rtc;
-lv_obj_t *label1, *label2;
-static lv_obj_t *btnm1, *btnm_p;
+lv_obj_t *label1, *label2, *label_text;
+static lv_obj_t *btnm1, *btnm_p, *btnm_t;
 lv_obj_t *calendar;
 lv_obj_t *img1, *img2, *img3;
 static lv_obj_t *spinbox_time1, *spinbox_time2;
@@ -43,6 +45,7 @@ extern RTC_DateTypeDef GetData;
 extern RTC_TimeTypeDef GetTime;
 uint8_t now_mode = 1;
 uint8_t week_text[7][5] = {"一", "二", "三", "四", "五", "六", "日"};
+
 uint8_t CaculateWeekDay(int y, int m, int d)
 {
     int week;
@@ -91,6 +94,16 @@ static void update_time(lv_task_t *task)
             btnm_test();
             lv_group_remove_obj(btnm1);
         }
+        if (now_mode == 5)
+        {
+            lv_obj_del(btnm_t);
+            lv_obj_del(label_text);
+            lv_group_remove_obj(btnm1);
+            lv_obj_t *act_obj = lv_scr_act(); // 获取当前活动页
+            lv_obj_clean(act_obj);            // 清空此前页面
+            btnm_test();
+            lv_group_remove_obj(btnm1);
+        }
         // lv_group_add_obj(group, btnm1);
         lv_ex_calendar_1();
         lv_group_add_obj(group, calendar);
@@ -123,7 +136,17 @@ static void update_time(lv_task_t *task)
             lv_obj_t *act_obj = lv_scr_act(); // 获取当前活动页
             lv_obj_clean(act_obj);            // 清空此前页面
             btnm_test();
-                }
+        }
+        if (now_mode == 5)
+        {
+            lv_obj_del(btnm_t);
+            lv_obj_del(label_text);
+            lv_group_remove_obj(btnm1);
+            lv_obj_t *act_obj = lv_scr_act(); // 获取当前活动页
+            lv_obj_clean(act_obj);            // 清空此前页面
+            btnm_test();
+            lv_group_remove_obj(btnm1);
+        }
         analog(lv_scr_act());
         lv_group_add_obj(group, btnm1);
         now_mode = 1;
@@ -146,6 +169,16 @@ static void update_time(lv_task_t *task)
         if (now_mode == 4)
         {
             lv_obj_del(btnm_p);
+            lv_group_remove_obj(btnm1);
+            lv_obj_t *act_obj = lv_scr_act(); // 获取当前活动页
+            lv_obj_clean(act_obj);            // 清空此前页面
+            btnm_test();
+            lv_group_remove_obj(btnm1);
+        }
+        if (now_mode == 5)
+        {
+            lv_obj_del(btnm_t);
+            lv_obj_del(label_text);
             lv_group_remove_obj(btnm1);
             lv_obj_t *act_obj = lv_scr_act(); // 获取当前活动页
             lv_obj_clean(act_obj);            // 清空此前页面
@@ -189,6 +222,16 @@ static void update_time(lv_task_t *task)
             lv_obj_del(spinbox_time2);
             lv_group_remove_obj(btnm1);
         }
+        if (now_mode == 5)
+        {
+            lv_obj_del(btnm_t);
+            lv_obj_del(label_text);
+            lv_group_remove_obj(btnm1);
+            lv_obj_t *act_obj = lv_scr_act(); // 获取当前活动页
+            lv_obj_clean(act_obj);            // 清空此前页面
+            btnm_test();
+            lv_group_remove_obj(btnm1);
+        }
         img1_show();
         btnm_p_test();
         lv_group_add_obj(group, btnm_p);
@@ -201,12 +244,50 @@ static void update_time(lv_task_t *task)
         lv_group_add_obj(group, btnm1);
         Mode = 0x00;
     }
+    else if (Mode == 0x10)
+    {
+        // lv_group_add_obj(group, btnm1);
+        if (now_mode == 1)
+        {
+            lv_obj_del(label1);
+            lv_obj_del(label2);
+            lv_group_remove_obj(btnm1);
+        }
+        if (now_mode == 2)
+        {
+            lv_obj_del(calendar);
+            lv_group_remove_obj(btnm1);
+        }
+        if (now_mode == 3)
+        {
+            lv_obj_del(spinbox_time1);
+            lv_obj_del(spinbox_time2);
+            lv_group_remove_obj(btnm1);
+        }
+        if (now_mode == 4)
+        {
+            lv_obj_del(btnm_p);
+            lv_group_remove_obj(btnm1);
+            lv_obj_t *act_obj = lv_scr_act(); // 获取当前活动页
+            lv_obj_clean(act_obj);            // 清空此前页面
+            btnm_test();
+            lv_group_remove_obj(btnm1);
+        }
+        text_show(1);
+        btnm_t_test();
+        lv_group_add_obj(group, btnm_t);
+        now_mode = 5;
+        Mode = 0x00;
+    }
+    else if (Mode == 0x11)
+    {
+        lv_group_remove_obj(btnm_t);
+        lv_group_add_obj(group, btnm1);
+        Mode = 0x00;
+    }
 }
-// LV_FONT_DECLARE(myFont45); // 字体声明,45号字体，30kb，仅有数字字母
-// LV_FONT_DECLARE(myFont60); // 字体声明,60号字体,200kb开始，大小160kb
-// LV_FONT_DECLARE(myFont35); // 字体声明,35号字体，数字字母加:.一二三四五六日年月
-LV_FONT_DECLARE(myFont24); // 字体声明,35号字体，数字字母加:.一二三四五六日年月
-LV_FONT_DECLARE(myFont50); // 字体声明,35号字体，数字字母加:.一二三四五六日年月
+LV_FONT_DECLARE(myFont24); // 字体声明,35号字体，数字字母加:.一二三四五六日年月,2M位置开始
+LV_FONT_DECLARE(myFont50); // 字体声明,35号字体，数字字母加:.一二三四五六日年月，0kb开始
 
 lv_fs_res_t lv_res;
 lv_fs_file_t lv_file;
@@ -236,6 +317,32 @@ void img3_show(void)
     lv_obj_set_auto_realign(img3, true);
     lv_obj_align(img3, NULL, LV_ALIGN_CENTER, 0, -40);
 }
+uint32_t num_f_text;
+void text_show(uint8_t num)
+{
+    uint8_t temp_text1[15];
+    lv_fs_file_t lv_file;
+    for (uint8_t i = 0; i < 255; i++)
+    {
+        text_temp2[i] = 0;
+    }
+    sprintf((uint8_t *)temp_text1, "F:/T%d.txt", num);
+    lv_res = lv_fs_open(&lv_file, temp_text1, LV_FS_MODE_RD);
+    lv_fs_read(&lv_file, text_temp2, 200, &num_f_text);
+    lv_fs_close(&lv_file);
+
+    lv_style_init(&font_style_24);
+    lv_style_set_text_font(&font_style_24, LV_STATE_DEFAULT, &myFont24);
+
+    lv_obj_t *scr = lv_disp_get_scr_act(NULL); /* 获取当前屏幕 */
+
+    label_text = lv_label_create(scr, NULL); /* 创建 label 控件 */
+    lv_obj_set_pos(label_text, 0, 0);
+    lv_obj_align(label_text, NULL, LV_ALIGN_CENTER, -45, -90); /* 设置控件的对齐方式-相对坐标 */ // 应用效果风格
+    lv_obj_add_style(label_text, LV_LABEL_PART_MAIN, &font_style_24);
+    lv_label_set_text(label_text, text_temp2); /* 设置文字 */
+}
+
 void test_lv_font(void) // UTF-8编码
 {
     lv_obj_t *central = lv_scr_act();
@@ -258,33 +365,7 @@ void test_lv_font(void) // UTF-8编码
 
     lv_obj_t *label2 = lv_label_create(scr, NULL); /* 创建 label 控件 */
     lv_obj_set_pos(label2, 0, 0);                  /* 设置控件的坐标 */
-    switch (GetData.WeekDay)
-    {
-    case 1:
-        sprintf((uint8_t *)text_temp, "20%02d年%02d月%02d日\n星期一", GetData.Year, GetData.Month, GetData.Date);
-        break;
-    case 2:
-        sprintf((uint8_t *)text_temp, "20%02d年%02d月%02d日\n星期二", GetData.Year, GetData.Month, GetData.Date);
-        break;
-    case 3:
-        sprintf((uint8_t *)text_temp, "20%02d年%02d月%02d日\n星期三", GetData.Year, GetData.Month, GetData.Date);
-        break;
-    case 4:
-        sprintf((uint8_t *)text_temp, "20%02d年%02d月%02d日\n星期四", GetData.Year, GetData.Month, GetData.Date);
-        break;
-    case 5:
-        sprintf((uint8_t *)text_temp, "20%02d年%02d月%02d日\n星期五", GetData.Year, GetData.Month, GetData.Date);
-        break;
-    case 6:
-        sprintf((uint8_t *)text_temp, "20%02d年%02d月%02d日\n星期六", GetData.Year, GetData.Month, GetData.Date);
-        break;
-    case 7:
-        sprintf((uint8_t *)text_temp, "20%02d年%02d月%02d日\n星期日", GetData.Year, GetData.Month, GetData.Date);
-        break;
-    default:
-        break;
-    }
-
+    sprintf((uint8_t *)text_temp2, "  20%02d年%02d月%02d日\n星期%s", GetData.Year, GetData.Month, GetData.Date, week_text[CaculateWeekDay(GetData.Year, GetData.Month, GetData.Date)]);
     lv_label_set_text(label2, text_temp);                                                  /* 设置文字 */
     lv_obj_align(label2, NULL, LV_ALIGN_CENTER, -30, 0); /* 设置控件的对齐方式-相对坐标 */ // 应用效果风格
     lv_obj_add_style(label2, LV_LABEL_PART_MAIN, &font_style_24);
@@ -325,32 +406,7 @@ void analog(lv_obj_t *win)
     lv_obj_align(label1, NULL, LV_ALIGN_CENTER, 0, -50);
 
     label2 = lv_label_create(lv_scr_act(), NULL);
-    switch (GetData.WeekDay)
-    {
-    case 1:
-        sprintf((uint8_t *)text_temp2, "  20%02d年%02d月%02d日\n星期一", GetData.Year, GetData.Month, GetData.Date);
-        break;
-    case 2:
-        sprintf((uint8_t *)text_temp2, "  20%02d年%02d月%02d日\n星期二", GetData.Year, GetData.Month, GetData.Date);
-        break;
-    case 3:
-        sprintf((uint8_t *)text_temp2, "  20%02d年%02d月%02d日\n星期三", GetData.Year, GetData.Month, GetData.Date);
-        break;
-    case 4:
-        sprintf((uint8_t *)text_temp2, "  20%02d年%02d月%02d日\n星期四", GetData.Year, GetData.Month, GetData.Date);
-        break;
-    case 5:
-        sprintf((uint8_t *)text_temp2, "  20%02d年%02d月%02d日\n星期五", GetData.Year, GetData.Month, GetData.Date);
-        break;
-    case 6:
-        sprintf((uint8_t *)text_temp2, "  20%02d年%02d月%02d日\n星期六", GetData.Year, GetData.Month, GetData.Date);
-        break;
-    case 7:
-        sprintf((uint8_t *)text_temp2, "  20%02d年%02d月%02d日\n星期日", GetData.Year, GetData.Month, GetData.Date);
-        break;
-    default:
-        break;
-    }
+    sprintf((uint8_t *)text_temp2, "  20%02d年%02d月%02d日\n星期%s", GetData.Year, GetData.Month, GetData.Date, week_text[CaculateWeekDay(GetData.Year, GetData.Month, GetData.Date)]);
     lv_obj_add_style(label2, LV_LABEL_PART_MAIN, &font_style_24);
     lv_label_set_long_mode(label2, LV_LABEL_LONG_BREAK); /*Break the long lines*/
                                                          //使能文本重绘色功能
@@ -365,6 +421,55 @@ void analog(lv_obj_t *win)
     lv_obj_align(label2, NULL, LV_ALIGN_CENTER, 0, 50);
 
     lv_task_t *task = lv_task_create(update_time, 1000, LV_TASK_PRIO_LOW, &test_data);
+}
+static void btm_t_event_handler(lv_obj_t *obj, lv_event_t event)
+{
+    switch (event)
+    {
+    case LV_EVENT_KEY:
+    {
+        const uint32_t *key = lv_event_get_data();
+        if (*key != LV_KEY_ENTER)
+        {
+            if (lv_btnmatrix_get_active_btn(btnm_t) == 0)
+            {
+                lv_obj_del(label_text);
+                text_show(1);
+            }
+            if (lv_btnmatrix_get_active_btn(btnm_t) == 1)
+            {
+                lv_obj_del(label_text);
+                text_show(2);
+            }
+            if (lv_btnmatrix_get_active_btn(btnm_t) == 2)
+            {
+                lv_obj_del(label_text);
+                text_show(3);
+            }
+        }
+        else
+        {
+            Mode = 0x11;
+        }
+    }
+    break;
+    default:
+        break;
+    }
+}
+void btnm_t_test(void)
+{
+    static const char *btnm_text[] = {
+        "1",
+        "2",
+        "3", ""};
+    btnm_t = lv_btnmatrix_create(lv_scr_act(), NULL);
+    // lv_obj_invalidate_area(btnm1,test);
+    lv_btnmatrix_set_map(btnm_t, btnm_text);
+    lv_obj_set_size(btnm_t, 100, 20); //可以设置窗口大小
+    lv_obj_align(btnm_t, NULL, LV_ALIGN_CENTER, 0, 75);
+    lv_group_add_obj(group, btnm_t);
+    lv_obj_set_event_cb(btnm_t, btm_t_event_handler);
 }
 static void btm_p_event_handler(lv_obj_t *obj, lv_event_t event)
 {
@@ -459,6 +564,13 @@ static void btm_event_handler(lv_obj_t *obj, lv_event_t event)
                 if (lv_btnmatrix_get_active_btn(btnm1) == 3)
                 {
                     Mode = 0x08;
+                }
+            }
+            if (now_mode != 5)
+            {
+                if (lv_btnmatrix_get_active_btn(btnm1) == 4)
+                {
+                    Mode = 0x10;
                 }
             }
         }

@@ -148,12 +148,12 @@ uint8_t count_f = 0;
 void write_to_flash(void)
 {
     uint8_t i;
-    f_res = f_open(&file1, "myFont50.bin", FA_READ);
+    f_res = f_open(&file1, "myFont24.bin", FA_READ);
     count_f = 0;
-    for (i = 0; i < 3; i++)
+    for (i = 0; i < 190; i++)
     {
         f_read(&file1, ReadBuffer, 10 * 1024, &bw);
-        my_W25QXX_Write(ReadBuffer, i * 10 * 1024, 10 * 1024);
+        my_W25QXX_Write(ReadBuffer, 1024 * 1024 + i * 10 * 1024, 10 * 1024);
         count_f++;
     }
     f_res = f_close(&file1);
@@ -166,16 +166,16 @@ void FatfsTest(void)
 {
     mount_disk(); //文件系统注册
     uint8_t i = 0;
-    //read_from_flash(); //测试字库是否正常写入
-    //     format_disk(); //格式化文件系统
-    //                       //	fileSystemInit();
-    //       create_file(); //建立文件并写入"PZKKKKK666\n"
-    //       while (1)
-    //       {
-    //           read_file(); //读取文件放到ReadBuffer中
-    //       }
-    //      f_res = f_open(&file, "1.bmp", FA_READ);
-    //      f_res = f_read(&file, ReadBuffer, 100, &bw);
+    // read_from_flash(); //测试字库是否正常写入
+    //      format_disk(); //格式化文件系统
+    //                        //	fileSystemInit();
+    //        create_file(); //建立文件并写入"PZKKKKK666\n"
+    //        while (1)
+    //        {
+    //            read_file(); //读取文件放到ReadBuffer中
+    //        }
+    //       f_res = f_open(&file, "1.bmp", FA_READ);
+    //       f_res = f_read(&file, ReadBuffer, 100, &bw);
 
     // f_res = f_close(&file);
     // while (1)
