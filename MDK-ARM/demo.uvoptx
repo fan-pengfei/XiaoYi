@@ -190,6 +190,11 @@
           <WinNumber>1</WinNumber>
           <ItemText>my_rtc</ItemText>
         </Ww>
+        <Ww>
+          <count>6</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>GetData</ItemText>
+        </Ww>
       </WatchWindow1>
       <WatchWindow2>
         <Ww>

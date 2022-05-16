@@ -118,6 +118,8 @@ static void lvgl_init(void)
     lv_port_fs_init();    // 文件系统设备初始化
     lv_mem_monitor(&mem_monitor);
 }
+extern RTC_DateTypeDef GetData;
+extern RTC_TimeTypeDef GetTime;
 uint32_t resCount = 0;
 
 /* USER CODE END 0 */
@@ -175,7 +177,9 @@ int main(void)
     // 	lv_res = lv_fs_open(&lv_file,"F:/hello.txt", LV_FS_MODE_WR);// 创建一个文件
     // 	lv_res = lv_fs_write(&lv_file,"hellobug esp32", sizeof("hellobug esp32"), &resCount);// 创建一个文件
     // lv_fs_close(&lv_file);
+    btnm_test();
     analog(lv_scr_act());
+
     //  my_lvgl_fs_test();
     // analog();
     // test_lv_font();

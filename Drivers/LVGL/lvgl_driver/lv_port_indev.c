@@ -47,17 +47,17 @@ static bool keypad_read(lv_indev_drv_t *indev_drv, lv_indev_data_t *data)
         /*Translate the keys to LVGL control characters according to your key definitions*/
         switch (act_key)
         {
-        case 1:
+        case 2:
             act_key = LV_KEY_LEFT;
             break;
-        case 2:
+        case 1:
             act_key = LV_KEY_RIGHT;
+            break;
+        case 4:
+            act_key = LV_KEY_ENTER;
             break;
         case 3:
             act_key = LV_KEY_UP;
-            break;
-        case 4:
-            act_key = LV_KEY_DOWN;
             break;
         }
         last_key = act_key;
@@ -74,23 +74,22 @@ static bool keypad_read(lv_indev_drv_t *indev_drv, lv_indev_data_t *data)
 /*Get the currently being pressed key.  0 if no key is pressed*/
 static uint32_t keypad_get_key(void)
 {
-//    if (HAL_GPIO_ReadPin(key_left1_GPIO_Port, key_left1_Pin) == 0)
-//    {
-//        return 1;
-//    }
-//    if (HAL_GPIO_ReadPin(key_left2_GPIO_Port, key_left2_Pin) == 0)
-//    {
-//        return 3;
-//    }
-//    if (HAL_GPIO_ReadPin(key_right1_GPIO_Port, key_right1_Pin) == 0)
-//    {
-//        return 2;
-//    }
-//    if (HAL_GPIO_ReadPin(key_right2_GPIO_Port, key_right2_Pin) == 0)
-//    {
-//        return 4;
-//    }
+    if (HAL_GPIO_ReadPin(K1_GPIO_Port, K1_Pin) == 0)
+    {
+        return 1;
+    }
+    if (HAL_GPIO_ReadPin(K2_GPIO_Port, K2_Pin) == 0)
+    {
+        return 2;
+    }
+    if (HAL_GPIO_ReadPin(K3_GPIO_Port, K3_Pin) == 0)
+    {
+        return 3;
+    }
+    if (HAL_GPIO_ReadPin(K4_GPIO_Port, K4_Pin) == 0)
+    {
+        return 4;
+    }
     /*Your code comes here*/
     return false;
 }
-

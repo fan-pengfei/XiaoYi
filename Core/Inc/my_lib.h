@@ -12,4 +12,5 @@
 void LCD_SET_LIGHT(int light);
 void analog(lv_obj_t *win);
 void test_lv_font(void);
+void btnm_test(void);
 #endif

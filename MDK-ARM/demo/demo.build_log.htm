@@ -27,63 +27,156 @@ Project File Date:  05/15/2022
 <h2>Output:</h2>
 *** Using Compiler 'V6.12', folder: 'D:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'demo'
-../Core/Src/my_lib.c(30): warning: passing 'uint8_t *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+../Core/Src/my_lib.c(65): warning: passing 'uint8_t *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        sprintf((uint8_t *)text_temp, "%02d:%02d:%02d", GetTime.Hours, GetTime.Minutes, GetTime.Seconds);
+                ^~~~~~~~~~~~~~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(417): note: passing argument to parameter here
+extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
+                                                  ^
+../Core/Src/my_lib.c(66): warning: passing 'uint8_t [500]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        lv_label_set_text(label1, text_temp); /* 设置文字 */
+                                  ^~~~~~~~~
+../Drivers/LVGL/lvgl/src/lv_widgets/../lv_widgets/lv_label.h(129): note: passing argument to parameter 'text' here
+void lv_label_set_text(lv_obj_t * label, const char * text);
+                                                      ^
+../Core/Src/my_lib.c(67): warning: passing 'uint8_t *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        sprintf((uint8_t *)text_temp2, "  20%02d年%02d月%02d日\n星期%s", GetData.Year, GetData.Month, GetData.Date, week_text[CaculateWeekDay(GetData.Year, GetData.Month, GetData.Date)]);
+                ^~~~~~~~~~~~~~~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(417): note: passing argument to parameter here
+extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
+                                                  ^
+../Core/Src/my_lib.c(68): warning: passing 'uint8_t [500]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        lv_label_set_text(label2, text_temp2); /* 设置文字 */
+                                  ^~~~~~~~~~
+../Drivers/LVGL/lvgl/src/lv_widgets/../lv_widgets/lv_label.h(129): note: passing argument to parameter 'text' here
+void lv_label_set_text(lv_obj_t * label, const char * text);
+                                                      ^
+../Core/Src/my_lib.c(256): warning: passing 'uint8_t *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
     sprintf((uint8_t *)text_temp, "%02d:%02d:%02d", my_rtc.hour, my_rtc.min, my_rtc.sec);
             ^~~~~~~~~~~~~~~~~~~~
 D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(417): note: passing argument to parameter here
 extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
                                                   ^
-../Core/Src/my_lib.c(31): warning: passing 'uint8_t [500]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+../Core/Src/my_lib.c(257): warning: passing 'uint8_t [500]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
     lv_label_set_text(label1, text_temp); /* 设置文字 */
                               ^~~~~~~~~
 ../Drivers/LVGL/lvgl/src/lv_widgets/../lv_widgets/lv_label.h(129): note: passing argument to parameter 'text' here
 void lv_label_set_text(lv_obj_t * label, const char * text);
                                                       ^
-../Core/Src/my_lib.c(76): warning: passing 'uint8_t *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
-    sprintf((uint8_t *)text_temp, "%02d:%02d:%02d", my_rtc.hour, my_rtc.min, my_rtc.sec);
-            ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/my_lib.c(264): warning: passing 'uint8_t *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        sprintf((uint8_t *)text_temp, "20%02d年%02d月%02d日\n星期一", GetData.Year, GetData.Month, GetData.Date);
+                ^~~~~~~~~~~~~~~~~~~~
 D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(417): note: passing argument to parameter here
 extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
                                                   ^
-../Core/Src/my_lib.c(77): warning: passing 'uint8_t [500]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
-    lv_label_set_text(label1, text_temp); /* 设置文字 */
+../Core/Src/my_lib.c(267): warning: passing 'uint8_t *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        sprintf((uint8_t *)text_temp, "20%02d年%02d月%02d日\n星期二", GetData.Year, GetData.Month, GetData.Date);
+                ^~~~~~~~~~~~~~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(417): note: passing argument to parameter here
+extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
+                                                  ^
+../Core/Src/my_lib.c(270): warning: passing 'uint8_t *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        sprintf((uint8_t *)text_temp, "20%02d年%02d月%02d日\n星期三", GetData.Year, GetData.Month, GetData.Date);
+                ^~~~~~~~~~~~~~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(417): note: passing argument to parameter here
+extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
+                                                  ^
+../Core/Src/my_lib.c(273): warning: passing 'uint8_t *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        sprintf((uint8_t *)text_temp, "20%02d年%02d月%02d日\n星期四", GetData.Year, GetData.Month, GetData.Date);
+                ^~~~~~~~~~~~~~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(417): note: passing argument to parameter here
+extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
+                                                  ^
+../Core/Src/my_lib.c(276): warning: passing 'uint8_t *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        sprintf((uint8_t *)text_temp, "20%02d年%02d月%02d日\n星期五", GetData.Year, GetData.Month, GetData.Date);
+                ^~~~~~~~~~~~~~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(417): note: passing argument to parameter here
+extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
+                                                  ^
+../Core/Src/my_lib.c(279): warning: passing 'uint8_t *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        sprintf((uint8_t *)text_temp, "20%02d年%02d月%02d日\n星期六", GetData.Year, GetData.Month, GetData.Date);
+                ^~~~~~~~~~~~~~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(417): note: passing argument to parameter here
+extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
+                                                  ^
+../Core/Src/my_lib.c(282): warning: passing 'uint8_t *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        sprintf((uint8_t *)text_temp, "20%02d年%02d月%02d日\n星期日", GetData.Year, GetData.Month, GetData.Date);
+                ^~~~~~~~~~~~~~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(417): note: passing argument to parameter here
+extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
+                                                  ^
+../Core/Src/my_lib.c(288): warning: passing 'uint8_t [500]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+    lv_label_set_text(label2, text_temp);                                                  /* 设置文字 */
                               ^~~~~~~~~
 ../Drivers/LVGL/lvgl/src/lv_widgets/../lv_widgets/lv_label.h(129): note: passing argument to parameter 'text' here
 void lv_label_set_text(lv_obj_t * label, const char * text);
                                                       ^
-../Core/Src/my_lib.c(131): warning: passing 'uint8_t *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
-    sprintf((uint8_t *)text_temp, "%02d:%02d:%02d", my_rtc.hour, my_rtc.min, my_rtc.sec);
+../Core/Src/my_lib.c(313): warning: passing 'uint8_t *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+    sprintf((uint8_t *)text_temp, "%02d:%02d:%02d", GetTime.Hours, GetTime.Minutes, GetTime.Seconds);
             ^~~~~~~~~~~~~~~~~~~~
 D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(417): note: passing argument to parameter here
 extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
                                                   ^
-../Core/Src/my_lib.c(140): warning: passing 'uint8_t [500]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+../Core/Src/my_lib.c(322): warning: passing 'uint8_t [500]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
     lv_label_set_text(label1, text_temp);
                               ^~~~~~~~~
 ../Drivers/LVGL/lvgl/src/lv_widgets/../lv_widgets/lv_label.h(129): note: passing argument to parameter 'text' here
 void lv_label_set_text(lv_obj_t * label, const char * text);
                                                       ^
-../Core/Src/my_lib.c(148): warning: passing 'uint8_t *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
-    sprintf((uint8_t *)text_temp, "  2022年5月15日\n星期日", my_rtc.hour, my_rtc.min, my_rtc.sec);
-            ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/my_lib.c(331): warning: passing 'uint8_t *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        sprintf((uint8_t *)text_temp2, "  20%02d年%02d月%02d日\n星期一", GetData.Year, GetData.Month, GetData.Date);
+                ^~~~~~~~~~~~~~~~~~~~~
 D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(417): note: passing argument to parameter here
 extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
                                                   ^
-../Core/Src/my_lib.c(148): warning: data argument not used by format string [-Wformat-extra-args]
-    sprintf((uint8_t *)text_temp, "  2022年5月15日\n星期日", my_rtc.hour, my_rtc.min, my_rtc.sec);
-                                  ~~~~~~~~~~~~~~~~~~~~~~~~~  ^
-../Core/Src/my_lib.c(157): warning: passing 'uint8_t [500]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
-    lv_label_set_text(label2, text_temp);
-                              ^~~~~~~~~
+../Core/Src/my_lib.c(334): warning: passing 'uint8_t *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        sprintf((uint8_t *)text_temp2, "  20%02d年%02d月%02d日\n星期二", GetData.Year, GetData.Month, GetData.Date);
+                ^~~~~~~~~~~~~~~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(417): note: passing argument to parameter here
+extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
+                                                  ^
+../Core/Src/my_lib.c(337): warning: passing 'uint8_t *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        sprintf((uint8_t *)text_temp2, "  20%02d年%02d月%02d日\n星期三", GetData.Year, GetData.Month, GetData.Date);
+                ^~~~~~~~~~~~~~~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(417): note: passing argument to parameter here
+extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
+                                                  ^
+../Core/Src/my_lib.c(340): warning: passing 'uint8_t *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        sprintf((uint8_t *)text_temp2, "  20%02d年%02d月%02d日\n星期四", GetData.Year, GetData.Month, GetData.Date);
+                ^~~~~~~~~~~~~~~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(417): note: passing argument to parameter here
+extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
+                                                  ^
+../Core/Src/my_lib.c(343): warning: passing 'uint8_t *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        sprintf((uint8_t *)text_temp2, "  20%02d年%02d月%02d日\n星期五", GetData.Year, GetData.Month, GetData.Date);
+                ^~~~~~~~~~~~~~~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(417): note: passing argument to parameter here
+extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
+                                                  ^
+../Core/Src/my_lib.c(346): warning: passing 'uint8_t *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        sprintf((uint8_t *)text_temp2, "  20%02d年%02d月%02d日\n星期六", GetData.Year, GetData.Month, GetData.Date);
+                ^~~~~~~~~~~~~~~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(417): note: passing argument to parameter here
+extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
+                                                  ^
+../Core/Src/my_lib.c(349): warning: passing 'uint8_t *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        sprintf((uint8_t *)text_temp2, "  20%02d年%02d月%02d日\n星期日", GetData.Year, GetData.Month, GetData.Date);
+                ^~~~~~~~~~~~~~~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(417): note: passing argument to parameter here
+extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
+                                                  ^
+../Core/Src/my_lib.c(362): warning: passing 'uint8_t [500]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+    lv_label_set_text(label2, text_temp2);
+                              ^~~~~~~~~~
 ../Drivers/LVGL/lvgl/src/lv_widgets/../lv_widgets/lv_label.h(129): note: passing argument to parameter 'text' here
 void lv_label_set_text(lv_obj_t * label, const char * text);
                                                       ^
-9 warnings generated.
+24 warnings generated.
 compiling my_lib.c...
 linking...
-Program Size: Code=112438 RO-data=14506 RW-data=504 ZI-data=51856  
+Program Size: Code=144722 RO-data=42782 RW-data=664 ZI-data=52504  
 FromELF: creating hex file...
-"demo\demo.axf" - 0 Error(s), 9 Warning(s).
+"demo\demo.axf" - 0 Error(s), 24 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -106,7 +199,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.5.0
-Build Time Elapsed:  00:00:04
+Build Time Elapsed:  00:00:05
 </pre>
 </body>
 </html>

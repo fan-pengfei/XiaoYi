@@ -99,8 +99,8 @@ void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef *tim_baseHandle)
 Times time_tick = {0, 0, 0, 0};
 uint16_t flag_key[4] = {0}, cnt_key[4] = {0};
 uint16_t light_lcd = 500;
-RTC_DateTypeDef GetData;
-RTC_TimeTypeDef GetTime;
+volatile RTC_DateTypeDef GetData;
+volatile RTC_TimeTypeDef GetTime;
 char key1, key2, key3, key4;
 uint8_t text[50];
 extern RTC_HandleTypeDef hrtc;
@@ -126,13 +126,17 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
                 {
                     my_rtc.hour++;
                     my_rtc.min = 0;
+                    if (my_rtc.hour == 24)
+                    {
+                        my_rtc.hour = 0;
+                    }
                 }
             }
         }
         if (ms % 100 == 0)
         {
-            // HAL_RTC_GetTime(&hrtc, &GetTime, RTC_FORMAT_BIN);
-            // HAL_RTC_GetDate(&hrtc, &GetData, RTC_FORMAT_BIN);
+            HAL_RTC_GetTime(&hrtc, &GetTime, RTC_FORMAT_BIN);
+            HAL_RTC_GetDate(&hrtc, &GetData, RTC_FORMAT_BIN);
             HAL_GPIO_TogglePin(User_Led_GPIO_Port, User_Led_Pin);
             // usb_printf("OK\r\n");
             // usb_printf("%d,%d,%d,%d\r\n", key1, key2, key3, key4);
