@@ -296,7 +296,7 @@ uint8_t test_data = 0;
 void img1_show(void)
 {
     img1 = lv_img_create(lv_scr_act(), NULL);
-    lv_img_set_src(img1, "F:/P1.bin");
+    lv_img_set_src(img1, "F:/P4.bin");
     lv_obj_set_size(img1, 240, 200);
     lv_obj_set_auto_realign(img1, true);
     lv_obj_align(img1, NULL, LV_ALIGN_CENTER, 0, -40);
@@ -641,18 +641,18 @@ void lv_ex_calendar_1(void)
     /*Highlight a few days*/
     static lv_calendar_date_t highlighted_days[3]; /*Only its pointer will be saved so should be static*/
     highlighted_days[0].year = 2022;
-    highlighted_days[0].month = 5;
-    highlighted_days[0].day = 12;
+    highlighted_days[0].month = 6;
+    highlighted_days[0].day = 7;
 
-    highlighted_days[1].year = 2021;
-    highlighted_days[1].month = 10;
+    highlighted_days[1].year = 2022;
+    highlighted_days[1].month = 6;
     highlighted_days[1].day = 11;
 
-    highlighted_days[2].year = 2021;
+    highlighted_days[2].year = 2022;
     highlighted_days[2].month = 10;
-    highlighted_days[2].day = 22;
+    highlighted_days[2].day = 1;
 
-    lv_calendar_set_highlighted_dates(calendar, highlighted_days, 1);
+    lv_calendar_set_highlighted_dates(calendar, highlighted_days, 3);
 }
 int bcd_decimal_code(int bcd)
 {
